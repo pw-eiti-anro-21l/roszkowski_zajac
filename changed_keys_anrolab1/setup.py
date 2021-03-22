@@ -17,7 +17,7 @@ setup(
     zip_safe=True,
     maintainer='dominika',
     maintainer_email='domio626@gmail.com',
-    description='Używanie klawiszy u-góra, n-dół, j-prawo, h- lewo do sterowania zolwiem',
+    description='Używanie klawiszy u-góra, i-dół, j-prawo, h- lewo do sterowania zolwiem',
     license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
