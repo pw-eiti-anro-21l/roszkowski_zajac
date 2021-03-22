@@ -3,7 +3,7 @@
 <package format="3">
   <name>changed_keys_anrolab1</name>
   <version>0.0.0</version>
-  <description>Używanie klawiszy g-góra, d-dół, p-prawo, l- lewo do sterowania zolwiem</description>
+  <description>Używanie klawiszy u-góra, n-dół, j-prawo, h- lewo do sterowania zolwiem</description>
   <maintainer email="domio626@gmail.com">dominika</maintainer>
   <license>Apache License 2.0</license>
 
