@@ -28,7 +28,7 @@ class MinimalPublisher(Node):
         self.declare_parameter('right', 'j')
 	
         print("Move around by using these keys:")
-        print ("U- go forward, \n                                                           J- go left,      K- go right\n                                                          N- go backward,")
+        print ("U- go forward, \n                                                           H- go left,      J- go right\n                                                          N- go backward,")
 
     def publish_twist_message(self):
       
