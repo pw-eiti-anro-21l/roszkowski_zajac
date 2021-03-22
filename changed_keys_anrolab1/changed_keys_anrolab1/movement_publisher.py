@@ -23,17 +23,17 @@ class MinimalPublisher(Node):
         self.timer = self.create_timer(timer_period, self.publish_twist_message)
 
         self.declare_parameter('up', 'u')
-        self.declare_parameter('down', 'n')
+        self.declare_parameter('back', 'i')
         self.declare_parameter('left', 'h')
         self.declare_parameter('right', 'j')
 	
         print("Move around by using these keys:")
-        print ("U- go forward, \n                                                           H- go left,      J- go right\n                                                          N- go backward,")
+        print ("U- go forward, \n                                                           H- go left,      J- go right\n                                                          I- go backward,")
 
     def publish_twist_message(self):
       
         self.up = self.get_parameter('up').get_parameter_value().string_value
-        self.down = self.get_parameter('down').get_parameter_value().string_value
+        self.back = self.get_parameter('back').get_parameter_value().string_value
         self.left = self.get_parameter('left').get_parameter_value().string_value
         self.right = self.get_parameter('right').get_parameter_value().string_value
         
@@ -51,7 +51,7 @@ class MinimalPublisher(Node):
         if(self.up == key):
             twist_message.linear.x = 2.0
             twist_message.angular.z = 0.0
-        elif(self.down == key):
+        elif(self.back == key):
             twist_message.linear.x = -2.0
             twist_message.angular.z = 0.0
         elif(self.left == key):

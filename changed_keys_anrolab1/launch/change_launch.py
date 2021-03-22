@@ -16,7 +16,7 @@ def generate_launch_description():
 		output='screen',
 		parameters=[
 			{'up': 'u'},
-			{'down': 'n'},
+			{'back': 'i'},
 			{'left': 'h'},
 			{'right': 'j'}
 			]
