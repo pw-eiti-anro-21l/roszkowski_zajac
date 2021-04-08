@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+ 
+  <material name="green">
+      <color rgba="0.6 0.99 0.55 1"/>
+  </material>
+  
+  
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.2"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name = "green"/>
+    </visual>
+  </link>
+  
+  <link name='arm1'>
+    <visual>
+      <geometry>
+      	<!-- jak będą juz parametry to te rozmiary bedziemy definiowac wg nich -->
+        <box size="0.6 0.2 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name = "green"/>
+    </visual>
+  </link>
+ 
+   <link name='arm2'>
+    <visual>
+      <geometry>
+        <box size="0.6 0.2 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>      
+      <material name = "green"/>
+    </visual>
+  </link>
+  
+  
+  
+  <joint name="base_to_arm1" type="fixed">
+    <parent link="base_link"/>
+    <child link="arm1"/>
+    <origin xyz="0.2 0 0.3" rpy="0 2.2 0 "/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  
+  
+  
+  <joint name="arm1_to_arm2" type="fixed">
+    <parent link="arm1"/>
+    <child link="arm2"/>
+    <origin xyz="-0.3 0 -0.3" rpy="0 -1.5 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  
+  
+  
+</robot>
