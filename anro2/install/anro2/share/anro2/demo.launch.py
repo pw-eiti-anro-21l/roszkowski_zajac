@@ -9,13 +9,10 @@ def generate_launch_description():
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
-    urdf_file_name = 'robot_arm.urdf.xml'
-    rviz_file_name = 'robot_arm.rviz'
+    urdf_file_name = 'r2d2.urdf.xml'
     urdf = os.path.join(
         get_package_share_directory('anro2'),
         urdf_file_name)
-    rviz = os.path.join(
-        get_package_share_directory('anro2'))
     with open(urdf, 'r') as infp:
         robot_desc = infp.read()
 
@@ -30,13 +27,12 @@ def generate_launch_description():
             executable='robot_state_publisher',
             name='robot_state_publisher',
             output='screen',
-            parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro', ' ', urdf])
-            }]),
+            parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_desc}],
+            arguments=[urdf]),
             
         Node(
             package='anro2',
             executable='state_publisher',
             name='state_publisher',
             output='screen'),
-            parameters=['-d',rviz]
     ])

@@ -1,0 +1,22 @@
+[0.350s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/changed_keys_anrolab1': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/changed_keys_anrolab1 build --build-base /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/changed_keys_anrolab1/build install --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1 --record /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/changed_keys_anrolab1/install.log --single-version-externally-managed
+[0.646s] running egg_info
+[0.647s] writing ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/PKG-INFO
+[0.647s] writing dependency_links to ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/dependency_links.txt
+[0.648s] writing entry points to ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/entry_points.txt
+[0.648s] writing requirements to ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/requires.txt
+[0.648s] writing top-level names to ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/top_level.txt
+[0.694s] reading manifest file '../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/SOURCES.txt'
+[0.696s] writing manifest file '../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info/SOURCES.txt'
+[0.696s] running build
+[0.696s] running build_py
+[0.696s] running install
+[0.697s] running install_lib
+[0.699s] running install_data
+[0.700s] copying package.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/share/changed_keys_anrolab1
+[0.701s] running install_egg_info
+[0.703s] removing '/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/lib/python3.8/site-packages/changed_keys_anrolab1-0.0.0-py3.8.egg-info' (and everything under it)
+[0.704s] Copying ../build/changed_keys_anrolab1/changed_keys_anrolab1.egg-info to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/lib/python3.8/site-packages/changed_keys_anrolab1-0.0.0-py3.8.egg-info
+[0.705s] running install_scripts
+[0.730s] Installing talker script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/lib/changed_keys_anrolab1
+[0.731s] writing list of installed files to '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/changed_keys_anrolab1/install.log'
+[0.761s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/changed_keys_anrolab1' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/changed_keys_anrolab1 build --build-base /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/changed_keys_anrolab1/build install --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/changed_keys_anrolab1 --record /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/changed_keys_anrolab1/install.log --single-version-externally-managed
