@@ -33,10 +33,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': use_sim_time, 'robot_description': Command(['xacro', ' ', urdf])
             }]),
-            
-            #parameters=[{'use_sim_time': use_sim_time, 'robot_description': robot_desc}],
-            #arguments=[urdf]),
-            
+
             
         Node(
             package='rviz2',
@@ -45,5 +42,4 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': use_sim_time}],
             arguments=['-d',rviz]),
-            #parameters=['-d',rviz]),
     ])
