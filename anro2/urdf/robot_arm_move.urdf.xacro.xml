@@ -13,21 +13,10 @@
         <color rgba="0 0 0 1"/>
     </material>
     
-<!--
-
     <material name="red">
         <color rgba="1 0 0 1"/>
     </material>
 
-    <material name="yellow">
-        <color rgba="1 1 0 1"/>
-    </material>
-    
-    <material name="fuchsia">
-        <color rgba="1 0 1 1"/>
-    </material>
-
--->
 
     <material name="green">
         <color rgba="0.6 0.99 0.55 1"/>
@@ -36,31 +25,32 @@
 
   <link name="base_link">
         <visual>
-            <origin rpy="0 0 0" xyz="0.0 0.0 0.5"/>
+            <origin rpy="0 0 0" xyz="0.0 0 0.25"/>
           <material name="black"/>
             <geometry>
-                <box size="0.25 0.25 1"/>
+                <box size="0.25 0.25 0.5"/>
             </geometry>
         </visual>
     </link>
 
-    <joint name="base_to_link1" type="revolute">
-        <axis xyz="0 0 1" />
-        <origin rpy="${params['row1']['joint_rpy']}" xyz="${params['row1']['joint_xyz']}"/>
-        <parent link="base_link"/>
-        <child link="link1"/>
-        <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
-    </joint>
-
     <link name="link1">
         <visual>
             <origin rpy="${params['row1']['link_rpy']}" xyz="${params['row1']['link_xyz']}"/>
-          <material name="blue"/>
+          <material name="red"/>
             <geometry>
                 <cylinder radius="0.1" length="${params['row1']['link_len']}"/>
             </geometry>
         </visual>
     </link>
+
+    <joint name="base_to_link1" type="revolute">
+        <axis xyz="0 1 0" />
+        <origin rpy="0 0 0" xyz="0 0 0.5"/>
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
+    </joint>
+
 
     <link name="link2">
         <visual>
@@ -76,7 +66,7 @@
 
     <joint name="link1_to_link2" type="revolute">
         <axis xyz="0 0 1" />
-        <origin rpy="${params['row2']['joint_rpy']}" xyz="${params['row2']['joint_xyz']}"/>
+        <origin rpy="${params['row1']['joint_rpy']}" xyz="${params['row1']['joint_xyz']}"/>
         <parent link="link1"/>
         <child link="link2"/>
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
@@ -93,8 +83,8 @@
     </link>
 
     <joint name="link2_to_link3" type="revolute">
-        <axis xyz="0 0 1" />
-        <origin rpy="${params['row3']['joint_rpy']}" xyz="${params['row3']['joint_xyz']}"/>
+        <axis xyz="0 1 0" />
+        <origin rpy="${params['row2']['joint_rpy']}" xyz="${params['row2']['joint_xyz']}"/>
         <parent link="link2"/>
         <child link="link3"/>
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
@@ -113,7 +103,7 @@
 
     <joint name="link3_to_tool" type="fixed">
         <axis xyz="0 0 1" />
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin rpy="${params['row3']['joint_rpy']}" xyz="${params['row3']['joint_xyz']}"/>
         <parent link="link3"/>
         <child link="tool"/>
     </joint>

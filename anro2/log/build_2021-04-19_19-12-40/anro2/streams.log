@@ -1,0 +1,18 @@
+[0.296s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2
+[0.576s] running develop
+[0.731s] running egg_info
+[0.731s] writing anro2.egg-info/PKG-INFO
+[0.732s] writing dependency_links to anro2.egg-info/dependency_links.txt
+[0.732s] writing entry points to anro2.egg-info/entry_points.txt
+[0.732s] writing requirements to anro2.egg-info/requires.txt
+[0.732s] writing top-level names to anro2.egg-info/top_level.txt
+[0.769s] reading manifest file 'anro2.egg-info/SOURCES.txt'
+[0.770s] writing manifest file 'anro2.egg-info/SOURCES.txt'
+[0.811s] running build_ext
+[0.811s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages/anro2.egg-link (link to .)
+[0.813s] Installing state_publisher script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/anro2
+[0.813s] 
+[0.813s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2
+[0.813s] running install_data
+[0.813s] copying urdf/urdf_wyniki.yaml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/share/anro2
+[0.850s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2
