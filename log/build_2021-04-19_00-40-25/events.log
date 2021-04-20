@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000332] (-) JobUnselected: {'identifier': 'anro2'}
+[0.000378] (-) JobUnselected: {'identifier': 'changed_keys_anrolab1'}
+[0.001108] (-) EventReactorShutdown: {}

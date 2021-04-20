@@ -44,7 +44,7 @@
     </link>
 
     <joint name="base_to_link1" type="revolute">
-        <axis xyz="0 1 0" />
+        <axis xyz="0 0 1" />
         <origin rpy="0 0 0" xyz="0 0 0.5"/>
         <parent link="base_link"/>
         <child link="link1"/>
@@ -65,7 +65,7 @@
 
 
     <joint name="link1_to_link2" type="revolute">
-        <axis xyz="0 0 1" />
+        <axis xyz="0 1 0" />
         <origin rpy="${params['row1']['joint_rpy']}" xyz="${params['row1']['joint_xyz']}"/>
         <parent link="link1"/>
         <child link="link2"/>

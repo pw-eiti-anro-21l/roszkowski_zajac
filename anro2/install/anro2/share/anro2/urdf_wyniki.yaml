@@ -1,6 +1,6 @@
 row1:
   joint_xyz: 0 0 1
-  joint_rpy: 0.785398006439209 -1.5696700811386108 0.785398006439209
+  joint_rpy: 0 0 0
   link_xyz: 0 0 0.5
   link_rpy: 0 0 0
   link_len: 1.0
@@ -11,7 +11,7 @@ row2:
   link_rpy: 0 0 0
   link_len: 3.0
 row3:
-  joint_xyz: 0.0 0 2
+  joint_xyz: 0 0 2
   joint_rpy: 0.785398006439209 -1.5696700811386108 0.785398006439209
   link_xyz: 0 0 1.0
   link_rpy: 0 0 0

@@ -14,11 +14,9 @@
     </material>
     
 <!--
-
     <material name="red">
         <color rgba="1 0 0 1"/>
     </material>
-
     <material name="yellow">
         <color rgba="1 1 0 1"/>
     </material>
@@ -26,8 +24,8 @@
     <material name="fuchsia">
         <color rgba="1 0 1 1"/>
     </material>
-
 -->
+
     <material name="green">
         <color rgba="0.6 0.99 0.55 1"/>
     </material>

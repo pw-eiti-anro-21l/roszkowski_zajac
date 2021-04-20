@@ -11,7 +11,10 @@ anro2.egg-info/requires.txt
 anro2.egg-info/top_level.txt
 anro2.egg-info/zip-safe
 launch/demo.launch.py
+launch/demo_move.launch.py
+launch/rviz.launch.py
 resource/anro2
 urdf/dh_to_rpy.py
 urdf/robot_arm.urdf.xacro.xml
+urdf/robot_arm_move.urdf.xacro.xml
 urdf/urdf_wyniki.yaml
