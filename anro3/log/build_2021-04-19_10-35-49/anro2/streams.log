@@ -1,0 +1,17 @@
+[0.452s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2
+[0.884s] running develop
+[1.124s] running egg_info
+[1.125s] writing anro2.egg-info/PKG-INFO
+[1.125s] writing dependency_links to anro2.egg-info/dependency_links.txt
+[1.125s] writing entry points to anro2.egg-info/entry_points.txt
+[1.125s] writing requirements to anro2.egg-info/requires.txt
+[1.126s] writing top-level names to anro2.egg-info/top_level.txt
+[1.181s] reading manifest file 'anro2.egg-info/SOURCES.txt'
+[1.183s] writing manifest file 'anro2.egg-info/SOURCES.txt'
+[1.248s] running build_ext
+[1.248s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages/anro2.egg-link (link to .)
+[1.250s] Installing state_publisher script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/anro2
+[1.250s] 
+[1.251s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2
+[1.251s] running install_data
+[1.300s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro2/install/anro2
