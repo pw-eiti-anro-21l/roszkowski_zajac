@@ -15,7 +15,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name), glob('launch/*.py')),
         (os.path.join('share', package_name), glob('urdf/*')),
-        (os.path.join('share', package_name), glob('anro3')),
+        (os.path.join('share', package_name), glob('anro3/*')),
         (os.path.join('share', package_name), glob('*.json')),
     ],
     install_requires=['setuptools'],

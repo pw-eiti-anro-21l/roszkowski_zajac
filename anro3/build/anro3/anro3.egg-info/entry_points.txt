@@ -1,0 +1,3 @@
+[console_scripts]
+nonkdl = anro3.nonkdl_dkin:main
+
