@@ -27,7 +27,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'nonkdl= anro3.nonkdl_dkin:main'
+            'nonkdl= anro3.nonkdl_dkin:main',
+            'kdl=anro3.kdl_dkin:main'
         ],
     },
 )

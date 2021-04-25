@@ -1,3 +1,4 @@
 [console_scripts]
+kdl = anro3.kdl_dkin:main
 nonkdl = anro3.nonkdl_dkin:main
 

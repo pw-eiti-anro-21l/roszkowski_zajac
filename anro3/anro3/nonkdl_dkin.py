@@ -64,8 +64,7 @@ class NonKdl_dkin(Node):
         qua = rpy.to_quaternion()
         
         # stworzenie tematu pose_stamped_nonkdl
-        qos_profile = QoSProfile(depth=10)
-        pose_publisher = self.create_publisher(PoseStamped, '/pose_stamped_nonkdl', qos_profile)
+        pose_publisher = self.create_publisher(PoseStamped, '/pose_stamped_nonkdl', QoSProfile(depth=10))
 
         #utworzenie wiadomości
         pose = PoseStamped()

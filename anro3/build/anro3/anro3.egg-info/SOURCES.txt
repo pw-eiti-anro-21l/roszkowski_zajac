@@ -2,6 +2,7 @@ package.xml
 setup.cfg
 setup.py
 anro3/__init__.py
+anro3/kdl_dkin.py
 anro3/nonkdl_dkin.py
 anro3/pose_stamped_kin.py
 anro3/publ_kin.py
