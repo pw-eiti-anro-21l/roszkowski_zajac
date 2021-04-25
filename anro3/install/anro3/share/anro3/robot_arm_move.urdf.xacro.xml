@@ -104,7 +104,9 @@
 
     <joint name="link3_to_tool" type="fixed">
         <axis xyz="0 0 1" />
-        <origin rpy="${params['row3']['joint_rpy']}" xyz="${params['row3']['joint_xyz']}"/>
+        <!-- <origin rpy="${params['row3']['joint_rpy']}" xyz="${params['row3']['joint_xyz']}"/> -->
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+
         <parent link="link3"/>
         <child link="tool"/>
     </joint>

@@ -40,7 +40,7 @@ class NonKdl_dkin(Node):
 
         for i, mark in enumerate(values.keys()):
 
-            #przypisanie parametrów DH
+           #przypisanie parametrów DH
            a, d, alpha, theta = values[mark]
            a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
 
@@ -50,7 +50,7 @@ class NonKdl_dkin(Node):
             #względem końca poprzedniego członu
            translation_z = mathutils.Matrix.Translation((0, 0, d))
            rotation_z = mathutils.Matrix.Rotation(theta+msg.position[i], 4, 'Z')
-           translation_x = mathutils.Matrix.Translation((-a, 0, 0))
+           translation_x = mathutils.Matrix.Translation((a, 0, 0))
            rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
 
             #przemnożenie macierzy
@@ -58,68 +58,6 @@ class NonKdl_dkin(Node):
            T.append(m)
 
 
-# ############################
-
-#         # CZLON 1
-#         # przypisanie parametrów DH
-#         a, d, alpha, theta = values['row1']
-#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
-
-#         # przekształcenia macierzowe
-	    
-#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
-#         # względem końca poprzedniego członu
-#         translation_z = mathutils.Matrix.Translation((0, 0, d))
-#         rotation_z = mathutils.Matrix.Rotation(theta+msg.position[0], 4, 'Z')
-#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
-#         rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
-
-#         # przemnożenie macierzy
-#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
-#         T.append(m)
-
-# ############################	
-	
-#         # CZLON 2
-#         # przypisanie parametrów DH
-#         a, d, alpha, theta = values['row2']
-#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
-
-#         # przekształcenia macierzowe
-	    
-#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
-#         # względem końca poprzedniego członu
-#         translation_z = mathutils.Matrix.Translation((0, 0, d))
-#         rotation_z = mathutils.Matrix.Rotation(theta, 4, 'Z')
-#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
-#         rotation_x =mathutils.Matrix.Rotation(alpha+msg.position[1],4,  'X')
-
-#         # przemnożenie macierzy
-#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
-#         T.append(m)
-
-# ############################
-
-#         # CZLON 3
-#         # przypisanie parametrów DH
-#         a, d, alpha, theta = values['row3']
-#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
-
-#         # przekształcenia macierzowe
-	    
-#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
-#         # względem końca poprzedniego członu
-#         translation_z = mathutils.Matrix.Translation((0, 0, d))
-#         rotation_z = mathutils.Matrix.Rotation(theta, 4, 'Z')
-#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
-#         rotation_x =mathutils.Matrix.Rotation(alpha+msg.position[2],4,  'X')
-
-#         # przemnożenie macierzy
-#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
-#         T.append(m)
-	
-	
-	
 
         T_02 = T[0] @ T[1] @ T[2] 
         # wyznaczenie pozycji koncówki
@@ -138,9 +76,14 @@ class NonKdl_dkin(Node):
         pose.header.frame_id = "base_link"
 
         # zapis informacji o pozycji do wiadomości
+        # pose.pose.position.x = xyz[0]+0.05
+        # pose.pose.position.y = xyz[1]
+        # pose.pose.position.z = xyz[2]+1
+
         pose.pose.position.x = xyz[0]+0.05
         pose.pose.position.y = xyz[1]
         pose.pose.position.z = xyz[2]+1
+        
         pose.pose.orientation = Quaternion(w=qua[0], x=qua[1], y=qua[2], z=qua[3])
         # publikowanie wiadomości na temacie pose_stamped_nonkdl
         pose_publisher.publish(pose)
