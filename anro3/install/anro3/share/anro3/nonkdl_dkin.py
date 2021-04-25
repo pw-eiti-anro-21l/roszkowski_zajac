@@ -35,26 +35,91 @@ class NonKdl_dkin(Node):
         # pobranie parametrów DH
         values = readDHfile()
         T = []
+        
+        
 
         for i, mark in enumerate(values.keys()):
 
-            # przypisanie parametrów DH
-            a, d, alpha, theta = values[mark]
-            a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
+            #przypisanie parametrów DH
+           a, d, alpha, theta = values[mark]
+           a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
 
-            # przekształcenia macierzowe
+            #przekształcenia macierzowe
             
-            # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
-            # względem końca poprzedniego członu
-            translation_z = mathutils.Matrix.Translation((0, 0, d))
-            rotation_z = mathutils.Matrix.Rotation(theta+msg.position[i], 4, 'Z')
-            translation_x = mathutils.Matrix.Translation((a, 0, 0))
-            rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
+            #msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
+            #względem końca poprzedniego członu
+           translation_z = mathutils.Matrix.Translation((0, 0, d))
+           rotation_z = mathutils.Matrix.Rotation(theta+msg.position[i], 4, 'Z')
+           translation_x = mathutils.Matrix.Translation((-a, 0, 0))
+           rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
 
-            # przemnożenie macierzy
-            m = translation_x @ rotation_x @ translation_z @ rotation_z 
-            T.append(m)
+            #przemnożenie macierzy
+           m = translation_x @ rotation_x @ translation_z @ rotation_z 
+           T.append(m)
 
+
+# ############################
+
+#         # CZLON 1
+#         # przypisanie parametrów DH
+#         a, d, alpha, theta = values['row1']
+#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
+
+#         # przekształcenia macierzowe
+	    
+#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
+#         # względem końca poprzedniego członu
+#         translation_z = mathutils.Matrix.Translation((0, 0, d))
+#         rotation_z = mathutils.Matrix.Rotation(theta+msg.position[0], 4, 'Z')
+#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
+#         rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
+
+#         # przemnożenie macierzy
+#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
+#         T.append(m)
+
+# ############################	
+	
+#         # CZLON 2
+#         # przypisanie parametrów DH
+#         a, d, alpha, theta = values['row2']
+#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
+
+#         # przekształcenia macierzowe
+	    
+#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
+#         # względem końca poprzedniego członu
+#         translation_z = mathutils.Matrix.Translation((0, 0, d))
+#         rotation_z = mathutils.Matrix.Rotation(theta, 4, 'Z')
+#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
+#         rotation_x =mathutils.Matrix.Rotation(alpha+msg.position[1],4,  'X')
+
+#         # przemnożenie macierzy
+#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
+#         T.append(m)
+
+# ############################
+
+#         # CZLON 3
+#         # przypisanie parametrów DH
+#         a, d, alpha, theta = values['row3']
+#         a, d, alpha, theta = float(a), float(d), float(alpha), float(theta)
+
+#         # przekształcenia macierzowe
+	    
+#         # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
+#         # względem końca poprzedniego członu
+#         translation_z = mathutils.Matrix.Translation((0, 0, d))
+#         rotation_z = mathutils.Matrix.Rotation(theta, 4, 'Z')
+#         translation_x = mathutils.Matrix.Translation((a, 0, 0))
+#         rotation_x =mathutils.Matrix.Rotation(alpha+msg.position[2],4,  'X')
+
+#         # przemnożenie macierzy
+#         m = translation_x @ rotation_x @ translation_z @ rotation_z 
+#         T.append(m)
+	
+	
+	
 
         T_02 = T[0] @ T[1] @ T[2] 
         # wyznaczenie pozycji koncówki
