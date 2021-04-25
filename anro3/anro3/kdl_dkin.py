@@ -108,12 +108,12 @@ def readYAMLfile():
 
 	my_data=[]
 
-	joint1_RPY = data['row1']['j_rpy']
-	joint1_Vector = data['row1']['j_xyz']
-	joint2_RPY = data['row2']['j_rpy']
-	joint2_Vector = data['row2']['j_xyz']
-	joint3_RPY = data['row3']['j_rpy']
-	joint3_Vector = data['row3']['j_xyz']
+	joint1_RPY = data['row1']['joint_rpy']
+	joint1_Vector = data['row1']['joint_xyz']
+	joint2_RPY = data['row2']['joint_rpy']
+	joint2_Vector = data['row2']['joint_xyz']
+	joint3_RPY = data['row3']['joint_rpy']
+	joint3_Vector = data['row3']['joint_xyz']
 
 	my_data.extend((joint1_RPY,joint1_Vector,joint2_RPY,joint2_Vector,joint3_RPY,joint3_Vector))
 

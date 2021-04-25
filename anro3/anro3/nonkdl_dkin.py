@@ -46,8 +46,8 @@ class NonKdl_dkin(Node):
             
             # msg.position[i] jest <= 0, d+msg.position to aktualne wysunięcie danego członu do przodu
             # względem końca poprzedniego członu
-            translation_z = mathutils.Matrix.Translation((0, 0, d+msg.position[i]))
-            rotation_z = mathutils.Matrix.Rotation(theta, 4, 'Z')
+            translation_z = mathutils.Matrix.Translation((0, 0, d))
+            rotation_z = mathutils.Matrix.Rotation(theta+msg.position[i], 4, 'Z')
             translation_x = mathutils.Matrix.Translation((a, 0, 0))
             rotation_x =mathutils.Matrix.Rotation(alpha,4,  'X')
 

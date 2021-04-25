@@ -44,7 +44,7 @@ def get_xyz_rpy():
 
     for row in dh.keys():
         # dh_row = json.loads(json.dumps(row))
-        a, d, alpha, theta = values[row]
+        a, d, alpha, theta = dh[row]
         #a_translation = transformations.translation_matrix((dh_row["a"],0,0))
         #d_translation = transformations.translation_matrix((0,0,dh_row["d"]))
         #alpha_rotation = transformations.rotation_matrix(dh_row["alpha"],(1, 0, 0))
