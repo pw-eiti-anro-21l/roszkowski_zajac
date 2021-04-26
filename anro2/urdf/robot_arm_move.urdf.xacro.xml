@@ -48,7 +48,7 @@
         <origin rpy="0 0 0" xyz="0 0 0.5"/>
         <parent link="base_link"/>
         <child link="link1"/>
-        <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
+        <limit lower="-2.10" upper="2.10" effort="10" velocity="10"/>
     </joint>
 
 
@@ -69,7 +69,7 @@
         <origin rpy="${params['row1']['joint_rpy']}" xyz="${params['row1']['joint_xyz']}"/>
         <parent link="link1"/>
         <child link="link2"/>
-        <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
+        <limit lower="-3.04" upper="2.94" effort="10" velocity="10"/>
     </joint>
 
     <link name="link3">
@@ -87,7 +87,7 @@
         <origin rpy="${params['row2']['joint_rpy']}" xyz="${params['row2']['joint_xyz']}"/>
         <parent link="link2"/>
         <child link="link3"/>
-        <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
+        <limit lower="-1.48" upper="4.59" effort="10" velocity="10"/>
 
     </joint>
 
