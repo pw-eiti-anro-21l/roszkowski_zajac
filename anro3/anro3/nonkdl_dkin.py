@@ -64,9 +64,9 @@ class NonKdl_dkin(Node):
         pose.header.frame_id = "base_link"
 
 
-        pose.pose.position.x = xyz[0]+0.05
+        pose.pose.position.x = xyz[0]
         pose.pose.position.y = xyz[1]
-        pose.pose.position.z = xyz[2]+1
+        pose.pose.position.z = xyz[2]
         
         pose.pose.orientation = Quaternion(w=qua[0], x=qua[1], y=qua[2], z=qua[3])
         pose_publisher.publish(pose)

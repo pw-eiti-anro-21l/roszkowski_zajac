@@ -39,22 +39,22 @@ class Kdl_dkin(Node):
 		chain = Chain()
 
 		base_link__link_1 = Joint(Joint.RotZ) 
-		frame1 = Frame(Rotation.RPY(values[2][0],values[2][1],values[2][2]),
-			Vector(values[1][0],values[1][1],values[1][2])) 
+		frame1 = Frame(Rotation.RPY(values[0][0],values[0][1],values[0][2]),
+			Vector(values[3][0],values[3][1],values[3][2])) 
 		segment1 = Segment(base_link__link_1,frame1)
 		chain.addSegment(segment1) 
 
 
 		link_1__link_2 = Joint(Joint.RotY) 
-		frame2 = Frame(Rotation.RPY(values[4][0],values[4][1],values[4][2]),
-			Vector(values[3][0],values[3][1],values[3][2]))
+		frame2 = Frame(Rotation.RPY(values[2][0],values[2][1],values[2][2]),
+			Vector(values[5][2],values[5][1],-values[5][0]))
 		segment2=Segment(link_1__link_2,frame2)
 		chain.addSegment(segment2)
 
 
-		link_2__link_3 = Joint(Joint.RotX) 
-		frame3 = Frame(Rotation.RPY(values[0][0], values[0][2], values[0][1]),
-			Vector(0,0,0))
+		link_2__link_3 = Joint(Joint.RotZ) 
+		frame3 = Frame(Rotation.RPY(values[4][0], values[4][1], values[4][2]),
+			Vector(values[1][0],values[1][1],values[1][2]))
 		segment3=Segment(link_2__link_3,frame3)
 		chain.addSegment(segment3)
 
@@ -76,7 +76,7 @@ class Kdl_dkin(Node):
 		qua = finalFrame.M.GetQuaternion()
 
 
-		tool_offset = Vector(0, 0, 2)
+		tool_offset = Vector(0, 0, 0)
 		xyz = finalFrame.p + tool_offset
 
 

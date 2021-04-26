@@ -1,5 +1,5 @@
 row1:
-  joint_xyz: 0.0 0.0 1.0
+  joint_xyz: 0.0 0.0 0.0
   joint_rpy: 0.0 -0.0 1.57
   link_xyz: 0 0 -0.0
   link_rpy: 0 0 0
