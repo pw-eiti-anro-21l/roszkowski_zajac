@@ -1,0 +1,20 @@
+[0.351s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3
+[0.701s] running develop
+[0.880s] running egg_info
+[0.880s] writing anro3.egg-info/PKG-INFO
+[0.880s] writing dependency_links to anro3.egg-info/dependency_links.txt
+[0.881s] writing entry points to anro3.egg-info/entry_points.txt
+[0.881s] writing requirements to anro3.egg-info/requires.txt
+[0.881s] writing top-level names to anro3.egg-info/top_level.txt
+[0.924s] reading manifest file 'anro3.egg-info/SOURCES.txt'
+[0.925s] writing manifest file 'anro3.egg-info/SOURCES.txt'
+[0.975s] running build_ext
+[0.976s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages/anro3.egg-link (link to .)
+[0.977s] Installing kdl script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/anro3
+[0.977s] Installing nonkdl script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/anro3
+[0.977s] 
+[0.977s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3
+[0.978s] running install_data
+[0.978s] copying urdf/robot_arm_move.urdf.xacro.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/share/anro3
+[0.978s] copying urdf/Macierz_MD-G.json -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/share/anro3
+[1.017s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3

@@ -1,0 +1,19 @@
+[0.389s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3
+[0.773s] running develop
+[0.983s] running egg_info
+[0.983s] writing anro3.egg-info/PKG-INFO
+[0.983s] writing dependency_links to anro3.egg-info/dependency_links.txt
+[0.983s] writing entry points to anro3.egg-info/entry_points.txt
+[0.983s] writing requirements to anro3.egg-info/requires.txt
+[0.984s] writing top-level names to anro3.egg-info/top_level.txt
+[1.034s] reading manifest file 'anro3.egg-info/SOURCES.txt'
+[1.035s] writing manifest file 'anro3.egg-info/SOURCES.txt'
+[1.102s] running build_ext
+[1.102s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages/anro3.egg-link (link to .)
+[1.104s] Installing kdl script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/anro3
+[1.104s] Installing nonkdl script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/anro3
+[1.105s] 
+[1.105s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3
+[1.105s] running install_data
+[1.105s] copying anro3/nonkdl_dkin.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/share/anro3
+[1.151s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/build/anro3/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/anro3/install/anro3

@@ -25,7 +25,7 @@ class Kdl_dkin(Node):
 			'joint_states',
 			self.listener_callback,
 			10)
-		self.subscription  # prevent unused variable warning
+		self.subscription  
 
 
 	def listener_callback(self, msg):
@@ -35,29 +35,8 @@ class Kdl_dkin(Node):
 		values = readYAMLfile()
 
 
-		#Kinematic chain
 
 		chain = Chain()
-		# base_link__link_1 = Joint(Joint.RotZ) 
-		# frame1 = Frame(Rotation.RPY(values[0][0],values[0][1],values[0][2]),
-		# 	Vector(values[1][0],values[1][1],values[1][2])) 
-		# segment1 = Segment(base_link__link_1,frame1)
-		# chain.addSegment(segment1) 
-
-
-		# link_1__link_2 = Joint(Joint.RotZ) 
-		# frame2 = Frame(Rotation.RPY(values[2][0],values[2][1],values[2][2]),
-		# 	Vector(values[3][0],values[3][1],values[3][2]))
-		# segment2=Segment(link_1__link_2,frame2)
-		# chain.addSegment(segment2)
-
-
-		# link_2__link_3 = Joint(Joint.RotZ) 
-		# frame3 = Frame(Rotation.RPY(values[4][0],values[4][1],values[4][2]),
-		# 	Vector(values[5][0],values[5][1],values[5][2]))
-		# segment3=Segment(link_2__link_3,frame3)
-		# chain.addSegment(segment3)
-
 
 		base_link__link_1 = Joint(Joint.RotZ) 
 		frame1 = Frame(Rotation.RPY(values[2][0],values[2][1],values[2][2]),
@@ -68,42 +47,36 @@ class Kdl_dkin(Node):
 
 		link_1__link_2 = Joint(Joint.RotY) 
 		frame2 = Frame(Rotation.RPY(values[4][0],values[4][1],values[4][2]),
-			Vector(values[5][0],values[5][1],values[5][2]))
+			Vector(values[3][0],values[3][1],values[3][2]))
 		segment2=Segment(link_1__link_2,frame2)
 		chain.addSegment(segment2)
 
 
-		link_2__link_3 = Joint(Joint.RotZ) 
-		frame3 = Frame(Rotation.RPY(values[4][0],values[4][1],values[4][2]),
+		link_2__link_3 = Joint(Joint.RotX) 
+		frame3 = Frame(Rotation.RPY(values[0][0], values[0][2], values[0][1]),
 			Vector(0,0,0))
 		segment3=Segment(link_2__link_3,frame3)
 		chain.addSegment(segment3)
 
 
 
-
-		#Forward kinematics
-
 		joint_positions=JntArray(3)
-		# joint_positions[0]= msg.position[0]
-		# joint_positions[1]= msg.position[2]
-		# joint_positions[2]= msg.position[1]
+
 
 		joint_positions[0]= msg.position[0]
 		joint_positions[1]= msg.position[1]
 		joint_positions[2]= msg.position[2]
 
-		# Rekursywny solver kinematyki prostej
 
 		fk=ChainFkSolverPos_recursive(chain)
 		finalFrame=Frame()
 		fk.JntToCart(joint_positions,finalFrame)
 
-		# Rotational Matrix of the final Frame:  
+ 
 		qua = finalFrame.M.GetQuaternion()
 
-		# End-effector position + effector offset in respect to last joint (joint3):
-		tool_offset = Vector(0.05, 0, 0)
+
+		tool_offset = Vector(0, 0, 2)
 		xyz = finalFrame.p + tool_offset
 
 
@@ -119,8 +92,7 @@ class Kdl_dkin(Node):
 		poses.pose.position.x = xyz[0]
 		poses.pose.position.y = xyz[1]
 		poses.pose.position.z = xyz[2]
-		# poses.pose.orientation = Quaternion(x=float(qua[0]), y=float(qua[1]), z=float(qua[2]), w=float(qua[3]))
-		poses.pose.orientation = Quaternion(w=float(qua[3]), x=float(qua[2]), y=float(qua[1]), z=float(qua[0]))
+		poses.pose.orientation = Quaternion(w=float(qua[3]), x=float(qua[0]), y=float(qua[1]), z=float(qua[2]))
 		pose_publisher.publish(poses)
 
 

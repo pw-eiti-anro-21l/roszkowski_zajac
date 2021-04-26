@@ -11,14 +11,13 @@ class PosePublisher(Node):
     def __init__(self):
         super().__init__('pose_stamped_publisher')
         self.publisher_ = self.create_publisher(PoseStamped, '/tool_position', 10)
-        timer_period = 0.5  # seconds
+        timer_period = 0.5  
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
 
 
     def timer_callback(self):
         goal = PoseStamped()
-        #goal.header.seq = 1
         goal.header.stamp = ROSClock().now().to_msg()
         goal.header.frame_id = "base_link"
 
