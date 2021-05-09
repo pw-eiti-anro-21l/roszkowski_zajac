@@ -1,3 +1,0 @@
-[console_scripts]
-talker = changed_keys_anrolab1.movement_publisher:main
-
