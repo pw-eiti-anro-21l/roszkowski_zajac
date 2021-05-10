@@ -17,8 +17,11 @@ def generate_launch_description():
     rviz = os.path.join(
         get_package_share_directory('anro4'),
         rviz_file_name)
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
     with open(urdf, 'r') as infp:
         robot_desc = infp.read()
 
@@ -30,6 +33,7 @@ def generate_launch_description():
         Node(
             package='anro4',
             executable='interpolation_service',
+<<<<<<< HEAD
             name='interpolation_service',
             parameters=[{'use_sim_time': use_sim_time,
             }],
@@ -50,3 +54,8 @@ def generate_launch_description():
             parameters=[{'source_list': ['joint_interpolate']}],
 
     )])
+=======
+            name='interpolation_service'),
+
+    ])
+>>>>>>> master

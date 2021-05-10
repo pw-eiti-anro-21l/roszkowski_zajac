@@ -1,4 +1,5 @@
 row1:
+<<<<<<< HEAD
   joint_xyz: 0 0 1
   joint_rpy: 0 0 0
   link_xyz: 0 0 0.5
@@ -16,3 +17,22 @@ row3:
   link_xyz: 0 0 1.0
   link_rpy: 0 0 0
   link_len: 2.0
+=======
+  joint_xyz: 0.0 0.0 0.0
+  joint_rpy: 0.0 -0.0 1.57
+  link_xyz: 0 0 -0.0
+  link_rpy: 0 0 0
+  link_len: 0
+row2:
+  joint_xyz: 0.0 0.0 0.0
+  joint_rpy: -0.7853980048633404 1.5696701507009851 0.7853980048633404
+  link_xyz: 0 0 -0.0
+  link_rpy: 0 0 0
+  link_len: 0
+row3:
+  joint_xyz: 2.0 0.0 0.0
+  joint_rpy: 0.0 -0.0 1.57
+  link_xyz: 0 0 -0.0
+  link_rpy: 0 0 0
+  link_len: 0
+>>>>>>> master

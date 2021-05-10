@@ -25,13 +25,17 @@ class InterpolationServer(Node):
             self.initial_joint_states[0] = msg.position[0]
             self.initial_joint_states[1] = msg.position[1]
             self.initial_joint_states[2] = msg.position[2]
+<<<<<<< HEAD
             
+=======
+>>>>>>> master
     def interpolation_callback(self, request, response):
         self.in_action = True
         if request.interpolation_time != -1:
             if request.interpolation_time <= 0:
                 response.server_feedback = "Interpolation failed: incorrect argument(s)"
             else:
+<<<<<<< HEAD
                 if request.position_joint1 > 3.14:
                     request.position_joint1 = 3.14
                 elif request.position_joint1 < -3.14:
@@ -44,6 +48,20 @@ class InterpolationServer(Node):
                     request.position_joint3 = 1.43
                 elif request.position_joint3 < -1.43:
                     request.position_joint3 = -1.43
+=======
+                if request.position_joint1 > 0:
+                    request.position_joint1 = 0.
+                elif request.position_joint1 < -1:
+                    request.position_joint1 = -1.
+                if request.position_joint2 > 0:
+                    request.position_joint2 = 0.
+                elif request.position_joint2 < -1:
+                    request.position_joint2 = -1.
+                if request.position_joint3 > 0:
+                    request.position_joint3 = 0.
+                elif request.position_joint3 < -1:
+                    request.position_joint3 = -1.
+>>>>>>> master
                 if request.method != "linear" and request.method != "trapezoid":
                     self.linear_interpolation(request)
                     response.server_feedback = "Interpolation completed with bad input method defaulted to linear"
@@ -56,6 +74,10 @@ class InterpolationServer(Node):
         else:
             response.server_feedback = "Interpolation failed: incorrect argument(s)"
 
+<<<<<<< HEAD
+=======
+        # self.get_logger().info(f'Incoming request {position_joint1}, {position_joint2}, {position_joint3}, {interpolation_time}')
+>>>>>>> master
         self.in_action = False
         return response
     
@@ -64,7 +86,11 @@ class InterpolationServer(Node):
         sample_time = 0.01
         steps = floor(request.interpolation_time/sample_time)
         joint_states = JointState()
+<<<<<<< HEAD
         joint_states.name = ['base_to_link1', 'link1_to_link2', 'link2_to_link3']
+=======
+        joint_states.name = ['joint_base_1', 'joint_1_2', 'joint_2_3']
+>>>>>>> master
         start_joint_states = self.initial_joint_states
 
         for step in range(steps + 1):
@@ -80,7 +106,11 @@ class InterpolationServer(Node):
         sample_time = 0.01
         steps = floor(request.interpolation_time/sample_time)
         joint_states = JointState()
+<<<<<<< HEAD
         joint_states.name = ['base_to_link1', 'link1_to_link2', 'link2_to_link3']
+=======
+        joint_states.name = ['joint_base_1', 'joint_1_2', 'joint_2_3']
+>>>>>>> master
         start_joint_states = self.initial_joint_states
         max_vel_1 = (request.position_joint1 - start_joint_states[0]) / (0.8*request.interpolation_time)
         max_vel_2 = (request.position_joint2 - start_joint_states[1]) / (0.8*request.interpolation_time)
