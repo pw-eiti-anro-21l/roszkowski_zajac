@@ -25,24 +25,25 @@ class oint(Node):
     def interpolation_callback(self, request, response):
         if request.interpolation_time != -1:
             if request.interpolation_time <= 0:
-                response.server_feedback = "Given interpolation time < 0. Defaulting to 5s"
-                request.interpolation_time = 5
+                request.interpolation_time = 3
+                response.server_feedback = "Time below zero. Cannot execute - defaulting to 3s"
+                
             
             if request.version != "std" and request.version != "ext":
-                response.server_feedback = "Given version is wrong. Defaulting to standard"
+                response.server_feedback = "Wrong version - defaulting to standard"
                 request.version = "std"
 
             if request.method != "linear" and request.method != "trapezoid":
                 request.method = "linear"
-                self.get_logger().info("Given interpolation method is wrong. Defaulting to linear")
+                self.get_logger().info("Wrong interpolation method - defaulting to linear")
 
             if request.method == "linear":
                 self.linear_interpolation(request)
-                response.server_feedback = "Interpolation completed"
+                response.server_feedback = "Linear interpolation completed"
 
             elif request.method == "trapezoid":
                 self.trapezoid_interpolation(request)
-                response.server_feedback = "Interpolation completed"
+                response.server_feedback = "Trapezoid interpolation completed"
 
         else:
             response.server_feedback = "Interpolation failed: Invalid arguments"
@@ -50,12 +51,11 @@ class oint(Node):
 
     def linear_interpolation(self, request):
 
-
         sample_time = 0.01
         steps = floor(request.interpolation_time/sample_time)
         pose = PoseStamped()
-        initial_position = self.initial_position
-        initial_orientation = self.initial_orientation
+        starting_position = self.initial_position
+        starting_orientation = self.initial_orientation
 
         marker = Marker()
         marker_array = MarkerArray()
@@ -71,13 +71,13 @@ class oint(Node):
         marker.header.frame_id = "/base_link"
 
         for step in range(steps + 1):
-            pose_x = initial_position[0] + (request.x_goal - initial_position[0])/steps*step
-            pose_y = initial_position[1] + (request.y_goal - initial_position[1])/steps*step
-            pose_z = initial_position[2] + (request.z_goal - initial_position[2])/steps*step
+            pose_x = starting_position[0] + (request.x_goal - starting_position[0])/steps*step
+            pose_y = starting_position[1] + (request.y_goal - starting_position[1])/steps*step
+            pose_z = starting_position[2] + (request.z_goal - starting_position[2])/steps*step
 
-            ort_roll = initial_orientation[0] + (request.roll_goal - initial_orientation[0])/steps*step
-            ort_pitch = initial_orientation[1] + (request.pitch_goal - initial_orientation[1])/steps*step
-            ort_yaw = initial_orientation[2] + (request.yaw_goal - initial_orientation[2])/steps*step
+            ort_roll = starting_orientation[0] + (request.roll_goal - starting_orientation[0])/steps*step
+            ort_pitch = starting_orientation[1] + (request.pitch_goal - starting_orientation[1])/steps*step
+            ort_yaw = starting_orientation[2] + (request.yaw_goal - starting_orientation[2])/steps*step
             ort_quaternion = Quaternion(w=0.0, x=ort_roll, y=ort_pitch, z=ort_yaw)
 
             if request.version == "ext":  
@@ -112,16 +112,16 @@ class oint(Node):
         steps = floor(request.interpolation_time/sample_time)
         pose = PoseStamped()
 
-        initial_position = self.initial_position
-        initial_orientation = self.initial_orientation
+        starting_position = self.initial_position
+        starting_orientation = self.initial_orientation
 
-        max_vel_x = (request.x_goal - initial_position[0]) / (0.8*request.interpolation_time)
-        max_vel_y = (request.y_goal - initial_position[1]) / (0.8*request.interpolation_time)
-        max_vel_z = (request.z_goal - initial_position[2]) / (0.8*request.interpolation_time)
+        max_vel_x = (request.x_goal - starting_position[0]) / (0.8*request.interpolation_time)
+        max_vel_y = (request.y_goal - starting_position[1]) / (0.8*request.interpolation_time)
+        max_vel_z = (request.z_goal - starting_position[2]) / (0.8*request.interpolation_time)
 
-        max_vel_roll = (request.roll_goal - initial_orientation[0]) / (0.8*request.interpolation_time)
-        max_vel_pitch = (request.pitch_goal - initial_orientation[1]) / (0.8*request.interpolation_time)
-        max_vel_yaw = (request.yaw_goal - initial_orientation[2]) / (0.8*request.interpolation_time)
+        max_vel_roll = (request.roll_goal - starting_orientation[0]) / (0.8*request.interpolation_time)
+        max_vel_pitch = (request.pitch_goal - starting_orientation[1]) / (0.8*request.interpolation_time)
+        max_vel_yaw = (request.yaw_goal - starting_orientation[2]) / (0.8*request.interpolation_time)
 
         last_vel_x = 0
         last_vel_y = 0
@@ -131,13 +131,13 @@ class oint(Node):
         last_vel_pitch = 0
         last_vel_yaw = 0
 
-        pose_x = initial_position[0]
-        pose_y = initial_position[1]
-        pose_z = initial_position[2]
+        pose_x = starting_position[0]
+        pose_y = starting_position[1]
+        pose_z = starting_position[2]
 
-        ort_roll = initial_orientation[0]
-        ort_pitch = initial_orientation[1]
-        ort_yaw = initial_orientation[2]
+        ort_roll = starting_orientation[0]
+        ort_pitch = starting_orientation[1]
+        ort_yaw = starting_orientation[2]
 
         marker = Marker()
         marker_array = MarkerArray()

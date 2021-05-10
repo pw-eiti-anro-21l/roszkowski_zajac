@@ -1,7 +1,5 @@
 import json
 import math
-#import PyKDL
-#import mathutils
 import transformations
 import numpy
 
@@ -25,30 +23,12 @@ def write_yaml(xyz, rpy, row, a, file, d):
 
 def get_xyz_rpy():
 
-
-#    with open("dh_params.json", "r") as file:
-#        dh_params = json.load(file)
-
     dh = get_dh()
     
     yaml_file = open('urdf_wyniki.yaml', 'w')
 
-    
-#    rpy_xyz={}
-#   inter = 1
-#    iterator = 1
-
-#    xyz_array = []
-#    rpy_array = []
-#    params_array = []
-
     for row in dh.keys():
-        # dh_row = json.loads(json.dumps(row))
         a, d, alpha, theta = dh[row]
-        #a_translation = transformations.translation_matrix((dh_row["a"],0,0))
-        #d_translation = transformations.translation_matrix((0,0,dh_row["d"]))
-        #alpha_rotation = transformations.rotation_matrix(dh_row["alpha"],(1, 0, 0))
-        #theta_rotation = transformations.rotation_matrix(dh_row["theta"],(0, 0, 1))
         
         a_translation = transformations.translation_matrix((float(a),0,0))
         d_translation = transformations.translation_matrix((0,0,float(d)))

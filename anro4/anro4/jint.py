@@ -30,7 +30,7 @@ class InterpolationServer(Node):
         self.in_action = True
         if request.interpolation_time != -1:
             if request.interpolation_time <= 0:
-                response.server_feedback = "Interpolation failed: incorrect argument(s)"
+                response.server_feedback = "Time below zero. Cannot execute "
             else:
                 if request.position_joint1 > 3.14:
                     request.position_joint1 = 3.14
