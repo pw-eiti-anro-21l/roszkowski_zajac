@@ -1,5 +1,5 @@
 import sys
-from zadanie4_interface.srv import OpInterpolation
+from anro4_interface.srv import OpInterpolation
 import rclpy
 from rclpy.node import Node
 

@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from zadanie4_interface.srv import OpInterpolation
+from anro4_interface.srv import OpInterpolation
 from sensor_msgs.msg import JointState
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Quaternion

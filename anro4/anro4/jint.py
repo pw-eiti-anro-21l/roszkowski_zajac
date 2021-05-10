@@ -32,16 +32,16 @@ class InterpolationServer(Node):
             if request.interpolation_time <= 0:
                 response.server_feedback = "Interpolation failed: incorrect argument(s)"
             else:
-                if request.position_joint1 > 6.28:
-                    request.position_joint1 = 6.28
-                elif request.position_joint1 < -6.28:
-                    request.position_joint1 = -6.28
+                if request.position_joint1 > 3.14:
+                    request.position_joint1 = 3.14
+                elif request.position_joint1 < -3.14:
+                    request.position_joint1 = -3.14
                 if request.position_joint2 > 2.10:
                     request.position_joint2 = 2.10
                 elif request.position_joint2 < -2.10:
                     request.position_joint2 = -2.10
-                if request.position_joint3 > 4.39:
-                    request.position_joint3 = 4.39
+                if request.position_joint3 > 1.43:
+                    request.position_joint3 = 1.43
                 elif request.position_joint3 < -1.43:
                     request.position_joint3 = -1.43
                 if request.method != "linear" and request.method != "trapezoid":

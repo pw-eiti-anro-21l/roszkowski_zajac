@@ -17,6 +17,8 @@ def generate_launch_description():
     rviz = os.path.join(
         get_package_share_directory('anro4'),
         rviz_file_name)
+
+
     with open(urdf, 'r') as infp:
         robot_desc = infp.read()
 
@@ -28,6 +30,23 @@ def generate_launch_description():
         Node(
             package='anro4',
             executable='interpolation_service',
-            name='interpolation_service'),
+            name='interpolation_service',
+            parameters=[{'use_sim_time': use_sim_time,
+            }],
+            output='screen'),
+        Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            name='robot_state_publisher',
+            output='screen',
+            parameters=[{
+                'use_sim_time': use_sim_time,
+                'robot_description': Command(['xacro', ' ', urdf])
+            }]),
+        Node(
+            package='joint_state_publisher',
+            executable='joint_state_publisher',
+            name='joint_state_publisher',
+            parameters=[{'source_list': ['joint_interpolate']}],
 
-    ])
+    )])
