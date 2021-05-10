@@ -1,0 +1,30 @@
+running develop
+running egg_info
+creating anro2.egg-info
+writing anro2.egg-info/PKG-INFO
+writing dependency_links to anro2.egg-info/dependency_links.txt
+writing entry points to anro2.egg-info/entry_points.txt
+writing requirements to anro2.egg-info/requires.txt
+writing top-level names to anro2.egg-info/top_level.txt
+writing manifest file 'anro2.egg-info/SOURCES.txt'
+reading manifest file 'anro2.egg-info/SOURCES.txt'
+writing manifest file 'anro2.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/lib/python3.8/site-packages/site.py
+Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/lib/python3.8/site-packages/anro2.egg-link (link to .)
+Installing state_publisher script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/lib/anro2
+
+Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro2
+running install_data
+creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/ament_index
+creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/ament_index/resource_index
+creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/ament_index/resource_index/packages
+copying resource/anro2 -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/ament_index/resource_index/packages
+copying package.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying launch/demo_move.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying launch/rviz.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying launch/demo.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying urdf/dh_to_rpy.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying urdf/robot_arm_move.urdf.xacro.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying urdf/urdf_wyniki.yaml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2
+copying urdf/robot_arm.urdf.xacro.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro2/share/anro2

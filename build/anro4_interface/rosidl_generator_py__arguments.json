@@ -1,0 +1,26 @@
+{
+  "package_name": "anro4_interface",
+  "output_dir": "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_generator_py/anro4_interface",
+  "template_dir": "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_adapter/anro4_interface:srv/Interpolation.idl",
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_adapter/anro4_interface:srv/OpInterpolation.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/__init__.py",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_adapter/anro4_interface/srv/Interpolation.idl",
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_adapter/anro4_interface/srv/OpInterpolation.idl"
+  ]
+}

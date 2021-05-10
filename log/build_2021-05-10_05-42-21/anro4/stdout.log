@@ -1,0 +1,21 @@
+running develop
+running egg_info
+writing anro4.egg-info/PKG-INFO
+writing dependency_links to anro4.egg-info/dependency_links.txt
+writing entry points to anro4.egg-info/entry_points.txt
+writing requirements to anro4.egg-info/requires.txt
+writing top-level names to anro4.egg-info/top_level.txt
+reading manifest file 'anro4.egg-info/SOURCES.txt'
+writing manifest file 'anro4.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages/anro4.egg-link (link to .)
+Installing interpolation_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+Installing interpolation_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+Installing op_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+Installing op_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+
+Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4
+running install_data
+copying launch/oint.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+copying urdf/robot_arm_move.urdf.xacro.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+copying urdf/urdf_wyniki.yaml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4

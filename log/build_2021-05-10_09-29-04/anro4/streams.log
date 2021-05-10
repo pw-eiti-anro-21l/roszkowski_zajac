@@ -1,0 +1,21 @@
+[0.298s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4': AMENT_PREFIX_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface LD_LIBRARY_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4
+[0.572s] running develop
+[0.720s] running egg_info
+[0.720s] writing anro4.egg-info/PKG-INFO
+[0.720s] writing dependency_links to anro4.egg-info/dependency_links.txt
+[0.721s] writing entry points to anro4.egg-info/entry_points.txt
+[0.721s] writing requirements to anro4.egg-info/requires.txt
+[0.721s] writing top-level names to anro4.egg-info/top_level.txt
+[0.759s] reading manifest file 'anro4.egg-info/SOURCES.txt'
+[0.760s] writing manifest file 'anro4.egg-info/SOURCES.txt'
+[0.802s] running build_ext
+[0.803s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages/anro4.egg-link (link to .)
+[0.804s] Installing interpolation_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.804s] Installing interpolation_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.804s] Installing op_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.804s] Installing op_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.805s] 
+[0.805s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4
+[0.805s] running install_data
+[0.806s] error: can't copy 'launch/anro4_2.launch.py': doesn't exist or not a regular file
+[0.838s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4' returned '1': AMENT_PREFIX_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface LD_LIBRARY_PATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4

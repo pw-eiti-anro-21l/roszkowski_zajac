@@ -1,0 +1,6 @@
+[console_scripts]
+interpolation_client = anro4.jcmd:main
+interpolation_service = anro4.jint:main
+op_client = anro4.ocmd:main
+op_service = anro4.oint:main
+

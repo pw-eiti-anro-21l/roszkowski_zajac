@@ -1,0 +1,7 @@
+{
+  "package_name": "zadanie4_interface",
+  "non_idl_tuples": [
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface:srv/Interpolation.srv",
+    "/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface:srv/OpInterpolation.srv"
+  ]
+}

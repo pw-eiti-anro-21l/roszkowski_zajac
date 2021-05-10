@@ -1,0 +1,292 @@
+[0.000000] (-) TimerEvent: {}
+[0.001427] (-) JobUnselected: {'identifier': 'anro2'}
+[0.001527] (-) JobUnselected: {'identifier': 'anro3'}
+[0.002615] (-) JobUnselected: {'identifier': 'anro4'}
+[0.002689] (-) JobUnselected: {'identifier': 'changed_keys_anrolab1'}
+[0.002897] (anro4_interface) JobQueued: {'identifier': 'anro4_interface', 'dependencies': OrderedDict()}
+[0.002961] (anro4_interface) JobStarted: {'identifier': 'anro4_interface'}
+[0.016563] (anro4_interface) JobProgress: {'identifier': 'anro4_interface', 'progress': 'cmake'}
+[0.017879] (anro4_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface'], 'cwd': '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matikurcze00'), ('LC_TIME', 'pl_PL.UTF-8'), ('SSH_AGENT_PID', '1099'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matikurcze00'), ('OLDPWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('MANAGERPID', '860'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matikurcze00'), ('JOURNAL_STREAM', '8:37235'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matikurcze00'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matikurcze00-HP-ProBook-650-G2:@/tmp/.ICE-unix/1142,unix/matikurcze00-HP-ProBook-650-G2:/tmp/.ICE-unix/1142'), ('INVOCATION_ID', '74e3ae5825664f709af632c88155e3b3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c70d0bd2_dc8b_477d_9b08_c53eecb625ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.043260] (anro4_interface) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.071915] (anro4_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[0.072566] (anro4_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099629] (-) TimerEvent: {}
+[0.200020] (-) TimerEvent: {}
+[0.295924] (anro4_interface) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.300139] (-) TimerEvent: {}
+[0.306187] (anro4_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.308645] (anro4_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.313087] (anro4_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400294] (-) TimerEvent: {}
+[0.481152] (anro4_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500437] (-) TimerEvent: {}
+[0.536484] (anro4_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") \n'}
+[0.600577] (-) TimerEvent: {}
+[0.700923] (-) TimerEvent: {}
+[0.706814] (anro4_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.1 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.801038] (-) TimerEvent: {}
+[0.841493] (anro4_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.854339] (anro4_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.887385] (anro4_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3.5") \n'}
+[0.889313] (anro4_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.0 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[0.901155] (-) TimerEvent: {}
+[0.924124] (anro4_interface) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.5", minimum required is "3.5") \n'}
+[0.924593] (anro4_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.924792] (anro4_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.924965] (anro4_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[0.953742] (anro4_interface) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.001305] (-) TimerEvent: {}
+[1.035275] (anro4_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.078759] (anro4_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[1.082323] (anro4_interface) StdoutLine: {'line': b'-- Build files have been written to: /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface\n'}
+[1.090060] (anro4_interface) CommandEnded: {'returncode': 0}
+[1.091253] (anro4_interface) JobProgress: {'identifier': 'anro4_interface', 'progress': 'build'}
+[1.093769] (anro4_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface', '--', '-j4', '-l4'], 'cwd': '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matikurcze00'), ('LC_TIME', 'pl_PL.UTF-8'), ('SSH_AGENT_PID', '1099'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matikurcze00'), ('OLDPWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('MANAGERPID', '860'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matikurcze00'), ('JOURNAL_STREAM', '8:37235'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matikurcze00'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matikurcze00-HP-ProBook-650-G2:@/tmp/.ICE-unix/1142,unix/matikurcze00-HP-ProBook-650-G2:/tmp/.ICE-unix/1142'), ('INVOCATION_ID', '74e3ae5825664f709af632c88155e3b3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c70d0bd2_dc8b_477d_9b08_c53eecb625ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.101471] (-) TimerEvent: {}
+[1.150804] (anro4_interface) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.151296] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__cpp\x1b[0m\n'}
+[1.166406] (anro4_interface) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.201590] (-) TimerEvent: {}
+[1.302008] (-) TimerEvent: {}
+[1.402408] (-) TimerEvent: {}
+[1.502805] (-) TimerEvent: {}
+[1.603171] (-) TimerEvent: {}
+[1.693795] (anro4_interface) StdoutLine: {'line': b'[  5%] Built target anro4_interface__cpp\n'}
+[1.703324] (-) TimerEvent: {}
+[1.715099] (anro4_interface) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.752218] (anro4_interface) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.753927] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_generator_c\x1b[0m\n'}
+[1.754492] (anro4_interface) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.803435] (-) TimerEvent: {}
+[1.814406] (anro4_interface) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_generator_c.dir/rosidl_generator_c/anro4_interface/srv/detail/interpolation__functions.c.o\x1b[0m\n'}
+[1.903560] (-) TimerEvent: {}
+[1.938269] (anro4_interface) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_generator_c.dir/rosidl_generator_c/anro4_interface/srv/detail/op_interpolation__functions.c.o\x1b[0m\n'}
+[2.003673] (-) TimerEvent: {}
+[2.053309] (anro4_interface) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libanro4_interface__rosidl_generator_c.so\x1b[0m\n'}
+[2.103790] (-) TimerEvent: {}
+[2.134800] (anro4_interface) StdoutLine: {'line': b'[ 20%] Built target anro4_interface__rosidl_generator_c\n'}
+[2.156357] (anro4_interface) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.203901] (-) TimerEvent: {}
+[2.305077] (-) TimerEvent: {}
+[2.405499] (-) TimerEvent: {}
+[2.505891] (-) TimerEvent: {}
+[2.536335] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.572256] (anro4_interface) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/anro4_interface/srv/interpolation__type_support.cpp.o\x1b[0m\n'}
+[2.585945] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.606026] (-) TimerEvent: {}
+[2.614421] (anro4_interface) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/anro4_interface/srv/detail/interpolation__type_support.cpp.o\x1b[0m\n'}
+[2.633653] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.680989] (anro4_interface) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/anro4_interface/srv/detail/dds_fastrtps/interpolation__type_support.cpp.o\x1b[0m\n'}
+[2.706147] (-) TimerEvent: {}
+[2.806642] (-) TimerEvent: {}
+[2.907081] (-) TimerEvent: {}
+[3.007620] (-) TimerEvent: {}
+[3.039955] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[3.107752] (-) TimerEvent: {}
+[3.111976] (anro4_interface) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/anro4_interface/srv/detail/interpolation__type_support.c.o\x1b[0m\n'}
+[3.207882] (-) TimerEvent: {}
+[3.231522] (anro4_interface) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/anro4_interface/srv/detail/op_interpolation__type_support.c.o\x1b[0m\n'}
+[3.308010] (-) TimerEvent: {}
+[3.313590] (anro4_interface) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking C shared library libanro4_interface__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.387809] (anro4_interface) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/anro4_interface/srv/detail/op_interpolation__type_support.cpp.o\x1b[0m\n'}
+[3.405114] (anro4_interface) StdoutLine: {'line': b'[ 41%] Built target anro4_interface__rosidl_typesupport_introspection_c\n'}
+[3.408130] (-) TimerEvent: {}
+[3.430088] (anro4_interface) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/anro4_interface/srv/op_interpolation__type_support.cpp.o\x1b[0m\n'}
+[3.433413] (anro4_interface) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/anro4_interface/srv/detail/dds_fastrtps/op_interpolation__type_support.cpp.o\x1b[0m\n'}
+[3.508253] (-) TimerEvent: {}
+[3.608752] (-) TimerEvent: {}
+[3.709332] (-) TimerEvent: {}
+[3.804780] (anro4_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.809475] (-) TimerEvent: {}
+[3.910196] (-) TimerEvent: {}
+[4.010857] (-) TimerEvent: {}
+[4.111497] (-) TimerEvent: {}
+[4.154727] (anro4_interface) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libanro4_interface__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.211626] (-) TimerEvent: {}
+[4.312543] (-) TimerEvent: {}
+[4.333142] (anro4_interface) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libanro4_interface__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.340917] (anro4_interface) StdoutLine: {'line': b'[ 53%] Built target anro4_interface__rosidl_typesupport_introspection_cpp\n'}
+[4.412648] (-) TimerEvent: {}
+[4.424977] (anro4_interface) StdoutLine: {'line': b'[ 53%] Built target anro4_interface__rosidl_typesupport_cpp\n'}
+[4.483921] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_c\x1b[0m\n'}
+[4.505189] (anro4_interface) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/anro4_interface/srv/interpolation__type_support.cpp.o\x1b[0m\n'}
+[4.510788] (anro4_interface) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/anro4_interface/srv/op_interpolation__type_support.cpp.o\x1b[0m\n'}
+[4.512768] (-) TimerEvent: {}
+[4.529752] (anro4_interface) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libanro4_interface__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.580712] (anro4_interface) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libanro4_interface__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.612918] (-) TimerEvent: {}
+[4.649293] (anro4_interface) StdoutLine: {'line': b'[ 64%] Built target anro4_interface__rosidl_typesupport_c\n'}
+[4.688321] (anro4_interface) StdoutLine: {'line': b'[ 64%] Built target anro4_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[4.702860] (anro4_interface) StdoutLine: {'line': b'[ 66%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.713016] (-) TimerEvent: {}
+[4.813385] (-) TimerEvent: {}
+[4.913761] (-) TimerEvent: {}
+[5.014152] (-) TimerEvent: {}
+[5.114556] (-) TimerEvent: {}
+[5.185092] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[5.214698] (-) TimerEvent: {}
+[5.221962] (anro4_interface) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/anro4_interface/srv/detail/op_interpolation__type_support_c.cpp.o\x1b[0m\n'}
+[5.222277] (anro4_interface) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/anro4_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/anro4_interface/srv/detail/interpolation__type_support_c.cpp.o\x1b[0m\n'}
+[5.314815] (-) TimerEvent: {}
+[5.415401] (-) TimerEvent: {}
+[5.515925] (-) TimerEvent: {}
+[5.616366] (-) TimerEvent: {}
+[5.716819] (-) TimerEvent: {}
+[5.817280] (-) TimerEvent: {}
+[5.917752] (-) TimerEvent: {}
+[5.923193] (anro4_interface) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libanro4_interface__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.017956] (-) TimerEvent: {}
+[6.043092] (anro4_interface) StdoutLine: {'line': b'[ 74%] Built target anro4_interface__rosidl_typesupport_fastrtps_c\n'}
+[6.056707] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface\x1b[0m\n'}
+[6.069488] (anro4_interface) StdoutLine: {'line': b'[ 74%] Built target anro4_interface\n'}
+[6.083930] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__py\x1b[0m\n'}
+[6.099749] (anro4_interface) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.118078] (-) TimerEvent: {}
+[6.218437] (-) TimerEvent: {}
+[6.318804] (-) TimerEvent: {}
+[6.419153] (-) TimerEvent: {}
+[6.519502] (-) TimerEvent: {}
+[6.619854] (-) TimerEvent: {}
+[6.720175] (-) TimerEvent: {}
+[6.820541] (-) TimerEvent: {}
+[6.920887] (-) TimerEvent: {}
+[7.021269] (-) TimerEvent: {}
+[7.023819] (anro4_interface) StdoutLine: {'line': b'[ 76%] Built target anro4_interface__py\n'}
+[7.036598] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__python\x1b[0m\n'}
+[7.081309] (anro4_interface) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__python.dir/rosidl_generator_py/anro4_interface/srv/_op_interpolation_s.c.o\x1b[0m\n'}
+[7.081939] (anro4_interface) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__python.dir/rosidl_generator_py/anro4_interface/srv/_interpolation_s.c.o\x1b[0m\n'}
+[7.121410] (-) TimerEvent: {}
+[7.221875] (-) TimerEvent: {}
+[7.243123] (anro4_interface) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/anro4_interface/libanro4_interface__python.so\x1b[0m\n'}
+[7.300242] (anro4_interface) StdoutLine: {'line': b'[ 84%] Built target anro4_interface__python\n'}
+[7.315168] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[7.320137] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[7.320700] (anro4_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target anro4_interface__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[7.321903] (-) TimerEvent: {}
+[7.353248] (anro4_interface) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/anro4_interface/_anro4_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[7.359285] (anro4_interface) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/anro4_interface/_anro4_interface_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[7.366025] (anro4_interface) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/anro4_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/anro4_interface/_anro4_interface_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[7.422053] (-) TimerEvent: {}
+[7.522458] (-) TimerEvent: {}
+[7.530285] (anro4_interface) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/anro4_interface/anro4_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.583593] (anro4_interface) StdoutLine: {'line': b'[ 94%] Built target anro4_interface__rosidl_typesupport_introspection_c__pyext\n'}
+[7.584094] (anro4_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/anro4_interface/anro4_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.584482] (anro4_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/anro4_interface/anro4_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.622582] (-) TimerEvent: {}
+[7.635054] (anro4_interface) StdoutLine: {'line': b'[100%] Built target anro4_interface__rosidl_typesupport_c__pyext\n'}
+[7.676956] (anro4_interface) StdoutLine: {'line': b'[100%] Built target anro4_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[7.692805] (anro4_interface) CommandEnded: {'returncode': 0}
+[7.722768] (-) TimerEvent: {}
+[7.769995] (anro4_interface) JobProgress: {'identifier': 'anro4_interface', 'progress': 'install'}
+[7.784641] (anro4_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface'], 'cwd': '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matikurcze00'), ('LC_TIME', 'pl_PL.UTF-8'), ('SSH_AGENT_PID', '1099'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matikurcze00'), ('OLDPWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/anro4_interface'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('MANAGERPID', '860'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matikurcze00'), ('JOURNAL_STREAM', '8:37235'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matikurcze00'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matikurcze00-HP-ProBook-650-G2:@/tmp/.ICE-unix/1142,unix/matikurcze00-HP-ProBook-650-G2:/tmp/.ICE-unix/1142'), ('INVOCATION_ID', '74e3ae5825664f709af632c88155e3b3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c70d0bd2_dc8b_477d_9b08_c53eecb625ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.126'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[7.801335] (anro4_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.802385] (anro4_interface) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.803059] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/ament_index/resource_index/rosidl_interfaces/anro4_interface\n'}
+[7.817087] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.822832] (-) TimerEvent: {}
+[7.830126] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__functions.h\n'}
+[7.842806] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__struct.h\n'}
+[7.855651] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__type_support.h\n'}
+[7.867921] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__functions.h\n'}
+[7.879785] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__struct.h\n'}
+[7.892571] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__type_support.h\n'}
+[7.905267] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/interpolation.h\n'}
+[7.916293] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/op_interpolation.h\n'}
+[7.922957] (-) TimerEvent: {}
+[7.927677] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/library_path.sh\n'}
+[7.938859] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/library_path.dsv\n'}
+[7.950618] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.962203] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__rosidl_typesupport_fastrtps_c.h\n'}
+[7.973318] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__rosidl_typesupport_fastrtps_c.h\n'}
+[7.988030] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[8.002022] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[8.014752] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.023065] (-) TimerEvent: {}
+[8.025836] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.037029] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[8.048510] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[8.059831] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__rosidl_typesupport_introspection_c.h\n'}
+[8.071157] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__rosidl_typesupport_introspection_c.h\n'}
+[8.083372] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__builder.hpp\n'}
+[8.095540] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__struct.hpp\n'}
+[8.108583] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__traits.hpp\n'}
+[8.121254] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__builder.hpp\n'}
+[8.123170] (-) TimerEvent: {}
+[8.132540] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__struct.hpp\n'}
+[8.143834] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__traits.hpp\n'}
+[8.155250] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/interpolation.hpp\n'}
+[8.167380] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/op_interpolation.hpp\n'}
+[8.178951] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/interpolation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.189996] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/include/anro4_interface/srv/detail/op_interpolation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.201332] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/pythonpath.sh\n'}
+[8.217387] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/pythonpath.dsv\n'}
+[8.223308] (-) TimerEvent: {}
+[8.231158] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/__init__.py\n'}
+[8.243052] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/srv/__init__.py\n'}
+[8.254584] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/srv/_interpolation.py\n'}
+[8.266621] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/srv/_op_interpolation.py\n'}
+[8.278399] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/anro4_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[8.289651] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/anro4_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[8.300481] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/anro4_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[8.315416] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__python.so\n'}
+[8.323431] (-) TimerEvent: {}
+[8.329211] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/Interpolation.idl\n'}
+[8.340656] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/OpInterpolation.idl\n'}
+[8.352182] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/Interpolation.srv\n'}
+[8.364420] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/Interpolation_Request.msg\n'}
+[8.376132] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/Interpolation_Response.msg\n'}
+[8.387285] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/OpInterpolation.srv\n'}
+[8.398299] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/OpInterpolation_Request.msg\n'}
+[8.410492] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/srv/OpInterpolation_Response.msg\n'}
+[8.423541] (-) TimerEvent: {}
+[8.423921] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/ament_index/resource_index/package_run_dependencies/anro4_interface\n'}
+[8.436669] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/ament_index/resource_index/parent_prefix_path/anro4_interface\n'}
+[8.447704] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/ament_prefix_path.sh\n'}
+[8.459122] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/ament_prefix_path.dsv\n'}
+[8.471193] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/path.sh\n'}
+[8.482567] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/environment/path.dsv\n'}
+[8.493156] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/local_setup.bash\n'}
+[8.504089] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/local_setup.sh\n'}
+[8.514697] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/local_setup.zsh\n'}
+[8.523664] (-) TimerEvent: {}
+[8.527801] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/local_setup.dsv\n'}
+[8.540522] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/package.dsv\n'}
+[8.553315] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/ament_index/resource_index/packages/anro4_interface\n'}
+[8.565768] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[8.576937] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.589504] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[8.600987] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[8.611824] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.623216] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[8.623746] (-) TimerEvent: {}
+[8.636279] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[8.649079] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interfaceConfig.cmake\n'}
+[8.661868] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interfaceConfig-version.cmake\n'}
+[8.672862] (anro4_interface) StdoutLine: {'line': b'-- Symlinking: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/package.xml\n'}
+[8.683700] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_generator_c.so\n'}
+[8.684406] (anro4_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_generator_c.so" to ""\n'}
+[8.684646] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_introspection_c.so\n'}
+[8.685312] (anro4_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_introspection_c.so" to ""\n'}
+[8.685551] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_c.so\n'}
+[8.686198] (anro4_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_c.so" to ""\n'}
+[8.686522] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[8.687274] (anro4_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[8.687565] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_cpp.so\n'}
+[8.688185] (anro4_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/libanro4_interface__rosidl_typesupport_cpp.so" to ""\n'}
+[8.723910] (-) TimerEvent: {}
+[8.745016] (anro4_interface) StdoutLine: {'line': b"Compiling '/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages/anro4_interface/__init__.py'...\n"}
+[8.751888] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_generator_cExport.cmake\n'}
+[8.752275] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[8.752557] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[8.752814] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[8.753097] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_cExport.cmake\n'}
+[8.753431] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[8.753781] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_generator_cppExport.cmake\n'}
+[8.754198] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[8.754521] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[8.754903] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_cppExport.cmake\n'}
+[8.755212] (anro4_interface) StdoutLine: {'line': b'-- Installing: /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/share/anro4_interface/cmake/anro4_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[8.758136] (anro4_interface) CommandEnded: {'returncode': 0}
+[8.824260] (-) TimerEvent: {}
+[8.875176] (anro4_interface) JobEnded: {'identifier': 'anro4_interface', 'rc': 0}
+[8.876488] (-) EventReactorShutdown: {}

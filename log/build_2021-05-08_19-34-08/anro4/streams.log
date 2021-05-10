@@ -1,0 +1,20 @@
+[0.305s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4
+[0.595s] running develop
+[0.745s] running egg_info
+[0.746s] writing anro4.egg-info/PKG-INFO
+[0.746s] writing dependency_links to anro4.egg-info/dependency_links.txt
+[0.746s] writing entry points to anro4.egg-info/entry_points.txt
+[0.747s] writing requirements to anro4.egg-info/requires.txt
+[0.747s] writing top-level names to anro4.egg-info/top_level.txt
+[0.791s] reading manifest file 'anro4.egg-info/SOURCES.txt'
+[0.792s] writing manifest file 'anro4.egg-info/SOURCES.txt'
+[0.844s] running build_ext
+[0.845s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages/anro4.egg-link (link to .)
+[0.846s] Installing interpolation_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.847s] Installing interpolation_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.847s] Installing op_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.847s] Installing op_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.847s] 
+[0.847s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4
+[0.847s] running install_data
+[0.884s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4

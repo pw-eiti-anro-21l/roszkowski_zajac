@@ -1,0 +1,25 @@
+[0.302s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4
+[0.593s] running develop
+[0.751s] running egg_info
+[0.751s] writing anro4.egg-info/PKG-INFO
+[0.751s] writing dependency_links to anro4.egg-info/dependency_links.txt
+[0.752s] writing entry points to anro4.egg-info/entry_points.txt
+[0.752s] writing requirements to anro4.egg-info/requires.txt
+[0.752s] writing top-level names to anro4.egg-info/top_level.txt
+[0.788s] reading manifest file 'anro4.egg-info/SOURCES.txt'
+[0.789s] writing manifest file 'anro4.egg-info/SOURCES.txt'
+[0.830s] running build_ext
+[0.830s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages/anro4.egg-link (link to .)
+[0.831s] Installing interpolation_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.832s] Installing interpolation_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.832s] Installing op_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.832s] Installing op_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.833s] 
+[0.833s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4
+[0.833s] running install_data
+[0.833s] copying launch/jint.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.833s] copying launch/anro4.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.833s] copying urdf/robot_arm_move.urdf.xacro.xml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.834s] copying urdf/urdf_wyniki.yaml -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.834s] copying anro4/jint.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.868s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4_interface/lib/python3.8/site-packages:/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4:/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4

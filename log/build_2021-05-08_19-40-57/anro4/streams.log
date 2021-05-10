@@ -1,0 +1,21 @@
+[0.314s] Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4
+[0.610s] running develop
+[0.784s] running egg_info
+[0.784s] writing anro4.egg-info/PKG-INFO
+[0.784s] writing dependency_links to anro4.egg-info/dependency_links.txt
+[0.785s] writing entry points to anro4.egg-info/entry_points.txt
+[0.785s] writing requirements to anro4.egg-info/requires.txt
+[0.785s] writing top-level names to anro4.egg-info/top_level.txt
+[0.823s] reading manifest file 'anro4.egg-info/SOURCES.txt'
+[0.824s] writing manifest file 'anro4.egg-info/SOURCES.txt'
+[0.872s] running build_ext
+[0.873s] Creating /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages/anro4.egg-link (link to .)
+[0.874s] Installing interpolation_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.874s] Installing interpolation_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.875s] Installing op_client script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.875s] Installing op_service script to /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/anro4
+[0.875s] 
+[0.875s] Installed /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4
+[0.875s] running install_data
+[0.876s] copying launch/jint.launch.py -> /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/share/anro4
+[0.908s] Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4' returned '0': PYTHONPATH=/home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4 --editable --build-directory /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4/build --no-deps install_data --install-dir /home/matikurcze00/dev_ws/src/roszkowski_zajac/install/anro4

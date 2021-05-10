@@ -1,0 +1,8 @@
+srv/Interpolation.idl
+srv/Interpolation.srv
+srv/Interpolation_Request.msg
+srv/Interpolation_Response.msg
+srv/OpInterpolation.idl
+srv/OpInterpolation.srv
+srv/OpInterpolation_Request.msg
+srv/OpInterpolation_Response.msg

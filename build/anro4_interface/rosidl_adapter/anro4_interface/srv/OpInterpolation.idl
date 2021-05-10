@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from anro4_interface/srv/OpInterpolation.srv
+// generated code does not contain a copyright notice
+
+
+module anro4_interface {
+  module srv {
+    struct OpInterpolation_Request {
+      double x_goal;
+
+      double y_goal;
+
+      double z_goal;
+
+      double roll_goal;
+
+      double pitch_goal;
+
+      double yaw_goal;
+
+      double interpolation_time;
+
+      string method;
+
+      string version;
+    };
+    struct OpInterpolation_Response {
+      string server_feedback;
+    };
+  };
+};

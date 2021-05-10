@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/libanro4_interface__rosidl_typesupport_fastrtps_c.so" "TARGETS" "anro4_interface__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

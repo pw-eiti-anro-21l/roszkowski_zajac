@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="l_width" value="2" />
+<xacro:property name="params" value="${load_yaml('urdf_wyniki.yaml')}"/>
+
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+  <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+          <material name="black"/>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+
+</robot>
