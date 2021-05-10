@@ -1,0 +1,17 @@
+[0.334s] Invoking command in '/home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/build/anro2': PYTHONPATH=/home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2
+[0.639s] running develop
+[0.790s] running egg_info
+[0.791s] writing anro2.egg-info/PKG-INFO
+[0.792s] writing dependency_links to anro2.egg-info/dependency_links.txt
+[0.792s] writing entry points to anro2.egg-info/entry_points.txt
+[0.793s] writing requirements to anro2.egg-info/requires.txt
+[0.793s] writing top-level names to anro2.egg-info/top_level.txt
+[0.836s] reading manifest file 'anro2.egg-info/SOURCES.txt'
+[0.837s] writing manifest file 'anro2.egg-info/SOURCES.txt'
+[0.901s] running build_ext
+[0.902s] Creating /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages/anro2.egg-link (link to .)
+[0.904s] Installing state_publisher script to /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2/lib/anro2
+[0.905s] 
+[0.906s] Installed /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/build/anro2
+[0.906s] running install_data
+[0.956s] Invoked command in '/home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/build/anro2' returned '0': PYTHONPATH=/home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2 --editable --build-directory /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/build/anro2/build --no-deps install_data --install-dir /home/dominika/official_anro_workspace/src/roszkowski_zajac/anro2/install/anro2
