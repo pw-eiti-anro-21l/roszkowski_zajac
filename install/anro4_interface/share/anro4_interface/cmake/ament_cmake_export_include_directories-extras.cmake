@@ -1,1 +1,0 @@
-/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake

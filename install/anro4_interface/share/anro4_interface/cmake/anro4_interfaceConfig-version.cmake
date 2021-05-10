@@ -1,1 +1,0 @@
-/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/ament_cmake_core/anro4_interfaceConfig-version.cmake

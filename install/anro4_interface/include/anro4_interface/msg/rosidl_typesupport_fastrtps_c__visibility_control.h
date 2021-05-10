@@ -1,1 +1,0 @@
-/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_typesupport_fastrtps_c/anro4_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
