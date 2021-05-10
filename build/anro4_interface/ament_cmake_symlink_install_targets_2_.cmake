@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface/rosidl_generator_py/anro4_interface/anro4_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "anro4_interface__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.8/site-packages/anro4_interface")

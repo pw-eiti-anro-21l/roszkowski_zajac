@@ -1,4 +1,0 @@
-Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface -- -j4 -l4
-Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface -- -j4 -l4
-Invoking command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface
-Invoked command in '/home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/matikurcze00/dev_ws/src/roszkowski_zajac/build/anro4_interface
