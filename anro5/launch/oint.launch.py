@@ -8,7 +8,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    urdf_file_name = 'axis.urdf.xacro.xml'
+    # urdf_file_name = 'axis.urdf.xacro.xml'
+    urdf_file_name = 'robot_arm_move.urdf.xacro.xml'
     rviz_file_name = 'robot_arm.rviz'
     urdf = os.path.join(
         get_package_share_directory('anro5'),
