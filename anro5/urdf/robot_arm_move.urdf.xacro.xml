@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="l_width" value="2" />
+<xacro:property name="params" value="${load_yaml('urdf_wyniki.yaml')}"/>
+
+
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+    
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+    
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+
+    <material name="green">
+        <color rgba="0.6 0.99 0.55 1"/>
+    </material>
+
+
+  <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0 0.25"/>
+          <material name="black"/>
+            <geometry>
+                <box size="0.25 0.25 0.5"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="link1">
+        <visual>
+            <origin rpy="${params['row1']['link_rpy']}" xyz="${params['row1']['link_xyz']}"/>
+          <material name="red"/>
+            <geometry>
+                <cylinder radius="0.1" length="${params['row1']['link_len']}"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_link1" type="revolute">
+
+        <axis xyz="0 0 1" />
+
+        <origin rpy="0 0 0" xyz="0 0 0.5"/>
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <limit lower="-2.10" upper="2.10" effort="10" velocity="10"/>
+    </joint>
+
+
+    <link name="link2">
+        <visual>
+            <origin rpy="${params['row2']['link_rpy']}" xyz="${params['row2']['link_xyz']}"/>
+          <material name="green"/>
+            <geometry>
+                <cylinder radius="0.1" length="${params['row2']['link_len']}"/>
+            </geometry>
+        </visual>
+    </link>
+
+
+
+    <joint name="link1_to_link2" type="revolute">
+        <axis xyz="1 0 0" />
+        <origin rpy="${params['row1']['joint_rpy']}" xyz="${params['row1']['joint_xyz']}"/>
+        <parent link="link1"/>
+        <child link="link2"/>
+        <limit lower="-1.43" upper="4.39" effort="10" velocity="10"/>
+    </joint>
+
+    <link name="link3">
+        <visual>
+            <origin rpy="${params['row3']['link_rpy']}" xyz="${params['row3']['link_xyz']}"/>
+          <material name="blue"/>
+            <geometry>
+                <cylinder radius="0.1" length="${params['row3']['link_len']}"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="link2_to_link3" type="revolute">
+
+        <axis xyz="0 1 0" />
+        <origin rpy="${params['row2']['joint_rpy']}" xyz="${params['row2']['joint_xyz']}"/>
+        <parent link="link2"/>
+        <child link="link3"/>
+        <limit lower="-1.48" upper="4.59" effort="10" velocity="10"/>
+    </joint>                                      
+
+    <link name="tool">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+          <material name="green"/>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="link3_to_tool" type="fixed">
+        <axis xyz="0 0 1" />
+        <origin rpy="${params['row3']['joint_rpy']}" xyz="${params['row3']['joint_xyz']}"/>
+        <parent link="link3"/>
+        <child link="tool"/>
+    </joint>
+</robot>
