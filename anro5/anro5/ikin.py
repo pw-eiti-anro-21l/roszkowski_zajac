@@ -51,10 +51,6 @@ class IKIN(Node):
 
         elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link3_length:
             self.get_logger().info("link2_to_link3 cannot move further")
-            self.get_logger().info(str(pose_x))
-            self.get_logger().info(str(pose_y))
-            self.get_logger().info(str(pose_z))
-            self.get_logger().info(str(link1_to_link2_trans))
 
 
 
@@ -62,6 +58,12 @@ class IKIN(Node):
         else:
             joint_states.position = [float(base_to_joint1_trans), float(link1_to_link2_trans), float(link2_to_link3_trans)]
             self.joint_publisher.publish(joint_states)
+
+
+        self.get_logger().info(str(pose_x))
+        self.get_logger().info(str(pose_y))
+        self.get_logger().info(str(pose_z))
+        self.get_logger().info(str(link1_to_link2_trans))
 
     # def get_length(self):
     #     path = get_package_share_directory('anro5') + "/dh_params.json"

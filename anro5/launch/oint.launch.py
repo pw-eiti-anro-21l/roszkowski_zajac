@@ -18,7 +18,6 @@ def generate_launch_description():
         get_package_share_directory('anro5'),
         rviz_file_name)
 
-
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
@@ -28,9 +27,7 @@ def generate_launch_description():
         Node(
             package='anro5',
             executable='pos_service',
-            name='pos_service',
-            parameters=[{'use_sim_time': use_sim_time}],
-            output='screen'),
+            name='pos_service'),
 
         Node(
             package='anro5',
