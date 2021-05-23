@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import JointState
-from math import cos, sin, atan, atan2, sqrt
+from math import cos, sin, atan, atan2, sqrt, acos, asin, pi
 from rclpy.qos import QoSProfile 
 import json
 import transformations
@@ -38,33 +38,44 @@ class IKIN(Node):
         pose_x = pose.pose.position.x
         pose_y = pose.pose.position.y
         pose_z = pose.pose.position.z
+        
+        difference = sqrt(pose_x**2 + pose_y**2 + pose_z**2)
 
-        base_to_joint1_trans = pose_z - self.link1_length - self.base_length
-        link1_to_link2_trans = -self.link2_length - pose_y
-        link2_to_link3_trans = pose_x - self.link3_length - self.tool_length
+        beta = acos((self.link2_length**2 + self.link3_length**2 - difference**2)/(2*self.link2_length*self.link3_length))
+        joint_2_3 = pi - beta
+        alpha = asin(self.link3_length*sin(beta)/difference)
+        link1_to_link2 = -(alpha + atan2(pose_z, sqrt(pose_x**2 + pose_y**2)))
+        base_to_link1 = atan2(pose_y, pose_x)
 
-        if base_to_joint1_trans > 0 or base_to_joint1_trans < -1*self.link1_length:
+        # base_to_joint1_trans = pose_z - self.link1_length - self.base_length
+        # link1_to_link2_trans = -self.link2_length - pose_y
+        # link2_to_link3_trans = pose_x - self.link3_length - self.tool_length
+
+        if (abs(base_to_link1)>3.14):
             self.get_logger().info("base_to_link1 cannot move further")
 
-        elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link2_length:
+        elif (abs(link1_to_link2+0.935)>0.635):
             self.get_logger().info("link1_to_link2 cannot move further")
 
-        elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link3_length:
+        elif (abs(link2_to_link3)>1.57):
             self.get_logger().info("link2_to_link3 cannot move further")
         else:
-            joint_states.position = [float(base_to_joint1_trans), float(link1_to_link2_trans), float(link2_to_link3_trans)]
+            joint_states.position = [float(base_to_link1), float(link1_to_link2), float(link2_to_link3)]
             self.joint_publisher.publish(joint_states)
 
 
         self.get_logger().info(str(pose_x))
         self.get_logger().info(str(pose_y))
         self.get_logger().info(str(pose_z))
-        self.get_logger().info(str(link1_to_link2_trans))
+        # self.get_logger().info(str(link1_to_link2_trans))
 
     # def get_length(self):
-    #     path = get_package_share_directory('anro5') + "/dh_params.json"
-    #     with open(path, "r") as read_file:
-    #         data = json.load(read_file)
+
+    #     with open(os.path.join(
+    #         get_package_share_directory('anro5'),'urdf_wyniki.yaml'), 'r') as file:
+
+    #         data = yaml.load(file, Loader=yaml.FullLoader)
+
     #     return data
 
 
