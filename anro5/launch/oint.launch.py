@@ -33,20 +33,4 @@ def generate_launch_description():
             package='anro5',
             executable='ikin',
             name='ikin'),
-
-        Node(
-            package='joint_state_publisher',
-            executable='joint_state_publisher',
-            name='joint_state_publisher',
-            parameters=[{'source_list': ['joint_interpolate']}]),
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            output='screen',
-            parameters=[{
-                'use_sim_time': use_sim_time,
-                'robot_description': Command(['xacro', ' ', urdf])
-            }]),
-
         ])

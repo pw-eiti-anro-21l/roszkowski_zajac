@@ -51,10 +51,6 @@ class IKIN(Node):
 
         elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link3_length:
             self.get_logger().info("link2_to_link3 cannot move further")
-
-
-
-
         else:
             joint_states.position = [float(base_to_joint1_trans), float(link1_to_link2_trans), float(link2_to_link3_trans)]
             self.joint_publisher.publish(joint_states)
