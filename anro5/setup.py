@@ -26,8 +26,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pos_service = anro5.oint:main',
-            'pos_client = anro5.ocmd:main',
+            'oint = anro5.oint:main',
+            'oint_client = anro5.ocmd:main',
             'ikin = anro5.ikin:main',
         ],
     },

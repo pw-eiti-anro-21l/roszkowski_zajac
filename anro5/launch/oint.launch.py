@@ -26,8 +26,8 @@ def generate_launch_description():
 
         Node(
             package='anro5',
-            executable='pos_service',
-            name='pos_service'),
+            executable='oint',
+            name='oint'),
 
         Node(
             package='anro5',

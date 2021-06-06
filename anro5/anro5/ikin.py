@@ -1,79 +1,69 @@
 import rclpy
-from rclpy.node import Node
+from rclpy.node import Node 
+from ament_index_python.packages import get_package_share_directory
 from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import JointState
-from math import cos, sin, atan, atan2, sqrt
-from rclpy.qos import QoSProfile 
+from math import cos, sin, atan, atan2, sqrt, acos, asin, pi
+from rclpy.qos import QoSProfile
 import json
-import transformations
-import mathutils
-from ament_index_python.packages import get_package_share_directory
 
-class IKIN(Node):
+def get_params(part, filename):
+    path = get_package_share_directory('anro5') + "/" + filename
+    with open(path, "r") as file:
+        read_file = json.load(file)
+    part_params = read_file[part]
+    return part_params
+
+class Ikin(Node):
 
     def __init__(self):
         super().__init__('ikin')
         qos_profile = QoSProfile(depth=10)
-        self.pose_subscriber = self.create_subscription(PoseStamped, '/pose_ikin', self.listener_callback, qos_profile)
-        self.joint_publisher = self.create_publisher(JointState, '/joint_interpolate', qos_profile)
-
-        # to get_length() powinno dzialac ale na razie po prostu podam wartosci
-
-        # self.link1_length = self.get_length()['row1']['link_len']
-        # self.link2_length = self.get_length()['row1']['link_len']
-        # self.link3_length = self.get_length()['row3']['link_len']
-        self.link1_length = 1.0
-        self.link2_length = 3.0
-        self.link3_length = 2.0
-        self.tool_length = 0.1
-        self.base_length = 0.5
+        self.pose_sub = self.create_subscription(PoseStamped, '/ikin_pose', self.listener_callback, qos_profile)
+        self.joint_pub = self.create_publisher(JointState, '/joint_interpolate', qos_profile)
+        self.base_height = float(get_params('base', 'params_server.json')['length'])
+        self.length_1_2 = float(get_params('link_2', 'params_server.json')['length'])
+        self.length_2_tool = float(get_params('link_3', 'params_server.json')['length']) + float(get_params('tool', 'params_server.json')['length'])
 
     def listener_callback(self, msg):
-        self.solve_inverse_kinematics(msg)
-        
-    def solve_inverse_kinematics (self, pose):
+        self.find_joint_states(msg)
+
+    def find_joint_states(self, pose):
         joint_states = JointState()
-        joint_states.name = ['base_to_link1', 'link1_to_link2', 'link2_to_link3']
+        joint_states.name = ['joint_0_1', 'joint_1_2', 'joint_2_3']
+        x = pose.pose.position.x
+        y = pose.pose.position.y
+        z = pose.pose.position.z - self.base_height
+        a = self.length_1_2
+        d = self.length_2_tool
+        dist = sqrt(x*x + y*y + z*z)
+        if (dist<1.1):
+            gamma = acos((a*a + d*d - dist*dist)/(2*a*d))
+        else: 
+            gamma = pi
+        joint_2_3 = pi - gamma
+        alpha = asin(d*sin(gamma)/dist)
+        joint_1_2 = -(alpha + atan2(z,sqrt(x*x + y*y)))
+        joint_0_1 = atan2(y,x)
         
-        pose_x = pose.pose.position.x
-        pose_y = pose.pose.position.y
-        pose_z = pose.pose.position.z
-
-        base_to_joint1_trans = pose_z - self.link1_length - self.base_length
-        link1_to_link2_trans = -self.link2_length - pose_y
-        link2_to_link3_trans = pose_x - self.link3_length - self.tool_length
-
-        if base_to_joint1_trans > 0 or base_to_joint1_trans < -1*self.link1_length:
-            self.get_logger().info("base_to_link1 cannot move further")
-
-        elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link2_length:
-            self.get_logger().info("link1_to_link2 cannot move further")
-
-        elif link1_to_link2_trans > 0 or link1_to_link2_trans < -1*self.link3_length:
-            self.get_logger().info("link2_to_link3 cannot move further")
+        if (abs(joint_0_1)>3.14):
+            self.get_logger().info("Error! Joint base->1 out of range.")
+        elif (abs(joint_1_2+0.935)>0.635):
+            self.get_logger().info("Error! Joint 1->2 out of range.")
+        elif (abs(joint_2_3)>2):
+            self.get_logger().info("Error! Joint 2->3 out of range.")
         else:
-            joint_states.position = [float(base_to_joint1_trans), float(link1_to_link2_trans), float(link2_to_link3_trans)]
-            self.joint_publisher.publish(joint_states)
+            joint_states.position = [float(joint_0_1), float(joint_1_2), float(joint_2_3)]
+            self.joint_pub.publish(joint_states)
 
 
-        self.get_logger().info(str(pose_x))
-        self.get_logger().info(str(pose_y))
-        self.get_logger().info(str(pose_z))
-        self.get_logger().info(str(link1_to_link2_trans))
-
-    # def get_length(self):
-    #     path = get_package_share_directory('anro5') + "/dh_params.json"
-    #     with open(path, "r") as read_file:
-    #         data = json.load(read_file)
-    #     return data
 
 
 def main(args=None):
     rclpy.init(args=args)
-    inv_kin_subscriber = IKIN()
-    rclpy.spin(inv_kin_subscriber)
+    ikin = Ikin()
+    rclpy.spin(ikin)
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
