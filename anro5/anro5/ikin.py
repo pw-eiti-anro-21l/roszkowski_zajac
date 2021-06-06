@@ -4,7 +4,11 @@ from ament_index_python.packages import get_package_share_directory
 from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import JointState
 from math import cos, sin, atan, atan2, sqrt, acos, asin, pi
+<<<<<<< HEAD
 from rclpy.qos import QoSProfile
+=======
+from rclpy.qos import QoSProfile 
+>>>>>>> 519d205763f99711d58959ebd698b00e31ca3572
 import json
 
 def get_params(part, filename):
@@ -45,7 +49,7 @@ class Ikin(Node):
         alpha = asin(d*sin(gamma)/dist)
         joint_1_2 = -(alpha + atan2(z,sqrt(x*x + y*y)))
         joint_0_1 = atan2(y,x)
-        
+
         if (abs(joint_0_1)>3.14):
             self.get_logger().info("Error! Joint base->1 out of range.")
         elif (abs(joint_1_2+0.935)>0.635):
@@ -55,7 +59,6 @@ class Ikin(Node):
         else:
             joint_states.position = [float(joint_0_1), float(joint_1_2), float(joint_2_3)]
             self.joint_pub.publish(joint_states)
-
 
 
 

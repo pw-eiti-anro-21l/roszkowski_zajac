@@ -50,6 +50,7 @@ class Oint(Node):
     def draw_rectangle(self, request):
         sample_time = 0.01
         steps = floor(request.time/sample_time)
+
         pose = PoseStamped()
         a = request.a
         b = request.b
@@ -112,6 +113,7 @@ class Oint(Node):
                 pose.pose.position.x = pos_x
                 pose.pose.position.y = pos_y
                 pose.pose.position.z = pos_z
+
                 sleep(sample_time)
                 self.pose_pub.publish(pose)
                 marker.pose.position.x = pos_x
@@ -123,6 +125,7 @@ class Oint(Node):
                     marker.id = id
                     id += 1
                 self.marker_pub.publish(markers)
+
 
             self.initial_position = [pos_x, pos_y, pos_z]
 
