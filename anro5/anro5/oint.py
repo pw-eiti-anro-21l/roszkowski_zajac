@@ -19,8 +19,8 @@ class Oint(Node):
         self.pose_pub = self.create_publisher(PoseStamped, '/ikin_pose', qos_profile)
         self.joint_sub = self.create_subscription(JointState, 'joint_states', self.listener_callback, 10)
         self.joint_pub = self.create_publisher(JointState, 'joint_interpolate', qos_profile)
-        self.initial_position = [0., 3. 3.]
-        self.spawn_position = [0.,3., 3.]
+        self.initial_position = [0., 2. 4.5]
+        self.spawn_position = [0.,2., 4.5]
         self.initial_joints_states = [0., 0., 1.57]
 
     def listener_callback(self, msg):
@@ -74,7 +74,7 @@ class Oint(Node):
         marker.header.frame_id = "/base_link"
 
 
-        self.initial_position = [0, 3., 3.0]
+        self.initial_position = [0, 2., 4.5]
 
         for step in range(1,int((steps+1)/2)):
             pos_x = self.spawn_position[1] -(self.spawn_position[1]-self.initial_position[1] + (a/2))*step/steps
@@ -153,7 +153,7 @@ class Oint(Node):
         marker.color.b = 1.0
         marker.header.frame_id = "/base_link"
 
-        self.initial_position = [0, 3,3]
+        self.initial_position = [0, 2,4.5]
 
         for step in range(steps):
             pos_y = self.initial_position[1]+a*step/steps
