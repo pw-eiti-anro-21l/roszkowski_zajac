@@ -48,23 +48,16 @@ class Ikin(Node):
 
 
         # if (dist<1.1):      
-        if (((a*a + d*d - dist*dist)/(2*a*d)) >= -1) and (((a*a + d*d - dist*dist)/(2*a*d)) <= 1):
+        if (((a*a + d*d - dist*dist)/(2*a*d)) >= -1) and (((a*a + d*d - dist*dist)/(2*a*d)) <= 1): #ograniczenei bo inaczej wywala sie
             gamma = acos((a*a + d*d - dist*dist)/(2*a*d))
         else: 
             gamma = pi
             
         joint_2_3 = pi - gamma
         alpha = asin(d*sin(gamma)/dist)
-        joint_1_2 = -(alpha + atan2(z,sqrt(x*x + y*y)))
+        joint_1_2 = (alpha + atan2(z,sqrt(x*x + y*y)))
         joint_0_1 = atan2(y,x)
 
-        # if (abs(joint_0_1)>3.14):
-            # self.get_logger().info("Error! Joint base->1 out of range.")
-        # elif (abs(joint_1_2+0.935)>0.635):
-        #     self.get_logger().info("Error! Joint 1->2 out of range.")
-        # elif (abs(joint_2_3)>2):
-        #     self.get_logger().info("Error! Joint 2->3 out of range.")
-        # else:
         joint_states.position = [float(joint_0_1), float(joint_1_2), float(joint_2_3)]
         self.joint_pub.publish(joint_states)
 
