@@ -19,9 +19,9 @@ class Oint(Node):
         self.pose_pub = self.create_publisher(PoseStamped, '/ikin_pose', qos_profile)
         self.joint_sub = self.create_subscription(JointState, 'joint_states', self.listener_callback, 10)
         self.joint_pub = self.create_publisher(JointState, 'joint_interpolate', qos_profile)
-        self.initial_position = [0., 0., 3.0]
-        self.spawn_position = [0., 0., 3.0]
-        self.initial_joints_states = [0., .935, 0.]
+        self.initial_position = [0., 3. 3.]
+        self.spawn_position = [0.,3., 3.]
+        self.initial_joints_states = [0., 0., 1.57]
 
     def listener_callback(self, msg):
         for i in range(3):
@@ -74,7 +74,7 @@ class Oint(Node):
         marker.header.frame_id = "/base_link"
 
 
-        self.initial_position = [-a/2., 0., 3.0]
+        self.initial_position = [0, 3., 3.0]
 
         for step in range(1,int((steps+1)/2)):
             pos_x = self.spawn_position[1] -(self.spawn_position[1]-self.initial_position[1] + (a/2))*step/steps
@@ -153,7 +153,7 @@ class Oint(Node):
         marker.color.b = 1.0
         marker.header.frame_id = "/base_link"
 
-        self.initial_position = [0, 0,0]
+        self.initial_position = [0, 3,3]
 
         for step in range(steps):
             pos_y = self.initial_position[1]+a*step/steps
@@ -187,26 +187,6 @@ class Oint(Node):
             self.marker_pub.publish(markers)
 
         self.initial_position = [pos_x, pos_y, pos_z]
-
-    
-    def linear_ip(self, goal, time):
-        sample_time = 0.01
-        steps = floor(time/sample_time)
-        joint_states = JointState()
-        joint_states.name = ['base_to_link1', 'link1_to_link2', 'link2_to_link3']
-        current_joint_states = self.initial_joints_states
-
-
-        for step in range(steps + 1):
-            joint_0_1_state = current_joint_states[0] + (goal[0] - current_joint_states[0])/steps*step
-            joint_1_2_state = current_joint_states[1] + (goal[1] - current_joint_states[1])/steps*step
-            joint_2_3_state = current_joint_states[2] + (goal[2] - current_joint_states[2])/steps*step
-            joint_states.position = [float(joint_0_1_state), float(joint_1_2_state), float(joint_2_3_state)]
-            
-            self.joint_pub.publish(joint_states)
-            sleep(sample_time)
-
-        self.initial_joints_states = [joint_0_1_state, joint_1_2_state, joint_2_3_state]
 
 
 def main(args=None):
