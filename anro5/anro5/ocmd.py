@@ -15,7 +15,7 @@ class Oint_client(Node):
         try:
             self.request.a = float(sys.argv[1])
             self.request.b = float(sys.argv[2])
-            self.request.time = float(sys.argv[3])
+            self.request.interpolation_time = float(sys.argv[3])
             self.request.method = sys.argv[4]
             self.future = self.client.call_async(self.request)
         except ValueError:
@@ -38,7 +38,7 @@ def main(args=None):
                 oint_client.get_logger().info(
                     'Service call failed %r' % (e,))
             else:
-                oint_client.get_logger().info(response.output)
+                oint_client.get_logger().info(response.server_feedback)
             break
 
     oint_client.destroy_node()

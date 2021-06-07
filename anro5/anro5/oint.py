@@ -13,15 +13,15 @@ class Oint(Node):
 
     def __init__(self):
         super().__init__('oint')
-        self.srv = self.create_service(PositionTool, 'invkin', self.interpolation_callback)
+        self.srv = self.create_service(PositionTool, 'PositionTool', self.interpolation_callback)
         qos_profile = QoSProfile(depth=10)
         self.marker_pub = self.create_publisher(MarkerArray, '/marker', qos_profile)
         self.pose_pub = self.create_publisher(PoseStamped, '/ikin_pose', qos_profile)
         self.joint_sub = self.create_subscription(JointState, 'joint_states', self.listener_callback, 10)
         self.joint_pub = self.create_publisher(JointState, 'joint_interpolate', qos_profile)
-        self.initial_position = [0., 0., 0.]
-        self.spawn_position = [0., 0., 0.]
-        self.initial_joints_states = [0., -.935, 0.]
+        self.initial_position = [0., 0., 3.0]
+        self.spawn_position = [0., 0., 3.0]
+        self.initial_joints_states = [0., .935, 0.]
 
     def listener_callback(self, msg):
         for i in range(3):
@@ -30,34 +30,34 @@ class Oint(Node):
     def interpolation_callback(self, request, response):
         pose = PoseStamped()
 
-        if request.time > 0:
+        if request.interpolation_time > 0:
 
             if request.method == "rectangle":
                 self.draw_rectangle(request)
-                response.output = "Finished drawing rectangle."
+                response.server_feedback = "Finished drawing rectangle."
 
             elif request.method == "ellipse":
                 self.draw_ellipse(request)
-                response.output == "Finished drawing ellipse."
+                response.server_feedback == "Finished drawing ellipse."
             
             else:
-                response.output == "This method does not exist."
+                response.server_feedback == "This method does not exist."
         else:
-            response.output = "Error! Wrong time value."
+            response.server_feedback = "Error! Wrong time value."
 
         return response
 
     def draw_rectangle(self, request):
         sample_time = 0.01
-        steps = floor(request.time/sample_time)
+        steps = floor(request.interpolation_time/sample_time)
 
         pose = PoseStamped()
         a = request.a
         b = request.b
         perim = (a+b)*2
-        a_steps = floor(request.time/sample_time*(a/perim))
-        b_steps = floor(request.time/sample_time*(b/perim))
-        pos_x = self.initial_position[0]
+        a_steps = floor(request.interpolation_time/sample_time*(a/perim))
+        b_steps = floor(request.interpolation_time/sample_time*(b/perim))
+        pos_y = self.initial_position[1]
 
 
         marker = Marker()
@@ -71,16 +71,16 @@ class Oint(Node):
         marker.color.r = 1.0
         marker.color.g = 0.0
         marker.color.b = 1.0
-        marker.header.frame_id = "/base"
+        marker.header.frame_id = "/base_link"
 
 
-        self.initial_position = [0., -a/2., 0.]
+        self.initial_position = [-a/2., 0., 3.0]
 
         for step in range(1,int((steps+1)/2)):
-            pos_y = self.spawn_position[1] -(self.spawn_position[1]-self.initial_position[1] + (a/2))*step/steps
+            pos_x = self.spawn_position[1] -(self.spawn_position[1]-self.initial_position[1] + (a/2))*step/steps
             pos_z = self.spawn_position[2] -(self.spawn_position[2]-self.initial_position[1] + (b/2))*step/steps
 
-            pose.header.frame_id = "base"
+            pose.header.frame_id = "base_link"
             pose.pose.position.x = pos_x
             pose.pose.position.y = pos_y
             pose.pose.position.z = pos_z
@@ -109,7 +109,7 @@ class Oint(Node):
                 pos_y = current_position[1] + y/steps*step
                 pos_z = current_position[2] + z/steps*step
 
-                pose.header.frame_id = "base"
+                pose.header.frame_id = "base_link"
                 pose.pose.position.x = pos_x
                 pose.pose.position.y = pos_y
                 pose.pose.position.z = pos_z
@@ -132,12 +132,12 @@ class Oint(Node):
 
     def draw_ellipse(self, request):
         sample_time = 0.01
-        steps = floor(request.time/sample_time)
+        steps = floor(request.interpolation_time/sample_time)
         pose = PoseStamped()
         current_position = self.initial_position
         a = request.a
         b = request.b
-        steps = floor(request.time/sample_time)
+        steps = floor(request.interpolation_time/sample_time)
         pos_x = current_position[0]
 
         marker = Marker()
@@ -151,14 +151,14 @@ class Oint(Node):
         marker.color.r = 1.0
         marker.color.g = 0.0
         marker.color.b = 1.0
-        marker.header.frame_id = "/base"
+        marker.header.frame_id = "/base_link"
 
         self.initial_position = [0, 0,0]
 
         for step in range(steps):
             pos_y = self.initial_position[1]+a*step/steps
             pos_z = self.spawn_position[2] -(self.spawn_position[2]-self.initial_position[2])*step/steps
-            pose.header.frame_id = "base"
+            pose.header.frame_id = "base_link"
             pose.pose.position.x = pos_x
             pose.pose.position.y = pos_y
             pose.pose.position.z = pos_z
@@ -170,7 +170,7 @@ class Oint(Node):
             pos_y = current_position[1] + a*cos(2*pi*step/steps)
             pos_z = current_position[2] + b*sin(2*pi*step/steps)
 
-            pose.header.frame_id = "base"
+            pose.header.frame_id = "base_link"
             pose.pose.position.x = pos_x
             pose.pose.position.y = pos_y
             pose.pose.position.z = pos_z
@@ -193,7 +193,7 @@ class Oint(Node):
         sample_time = 0.01
         steps = floor(time/sample_time)
         joint_states = JointState()
-        joint_states.name = ['joint_0_1', 'joint_1_2', 'joint_2_3']
+        joint_states.name = ['base_to_link1', 'link1_to_link2', 'link2_to_link3']
         current_joint_states = self.initial_joints_states
 
 

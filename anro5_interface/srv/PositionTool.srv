@@ -1,6 +1,6 @@
-string method
 float64 a
 float64 b
 float64 interpolation_time
+string method
 ---
 string server_feedback
