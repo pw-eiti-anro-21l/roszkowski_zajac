@@ -19,7 +19,7 @@ class Oint(Node):
         self.pose_pub = self.create_publisher(PoseStamped, '/ikin_pose', qos_profile)
         self.joint_sub = self.create_subscription(JointState, 'joint_states', self.listener_callback, 10)
         self.joint_pub = self.create_publisher(JointState, 'joint_interpolate', qos_profile)
-        self.initial_position = [0., 2. 4.5]
+        self.initial_position = [0., 2., 4.5]
         self.spawn_position = [0.,2., 4.5]
         self.initial_joints_states = [0., 0., 1.57]
 
